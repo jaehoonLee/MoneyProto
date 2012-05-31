@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>로그인 form</title>
+    <title>{% block title %} {% endblock %} form</title>
 </head>
 <body>
 {% if form.errors %}

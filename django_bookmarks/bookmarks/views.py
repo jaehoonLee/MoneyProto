@@ -1,11 +1,15 @@
 # Create your views here.
-from django.http import HttpResponse
+from django.http import *
+from django.shortcuts import *
 from django.http import HttpResponseRedirect
 from django.contrib import auth
 from django.template.loader import get_template
-from django.template import Context
-
-
+from django.template import *
+from django.contrib.auth import logout
+from bookmarks.forms import *
+from django.views.decorators.csrf import csrf_exempt
+from django import forms
+from django.forms.util import ErrorList
 import datetime
 
 def hello(request):
@@ -16,20 +20,64 @@ def current_datetime(request):
     html = "<html><body>it is now %s.</body></html>" % now
     return HttpResponse(html)
 
-def login_view(request):
-    username = request.POST.get('username', '')
-    password = request.POST.get('password', '')
-    user = auth.authenticate(username=username, password=password)
-    if user is not None and user.is_active:
-        auth.login(request, user)
-        return HttpResponseRedirect("/account/loggedin/")
-    else:
-        return HttpResponseRedirect("/account/invalid/")
-    
-def logout_view(request):
-    auth.logout(request)
-    return HttpResponseRedirect("/account/loggedout/")
 
+
+@csrf_exempt
+def login_page(request):
+    if request.method == 'POST':
+        user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
+        if user is not None:
+            if user.is_active:
+                auth.login(request, user)
+                # success
+                return HttpResponseRedirect('/')
+        else:
+            # disabled account
+            form = LoginForm(request.POST)
+            stats = "Your username and password doesn't exist"
+            return render_to_response('registration/login.html', {'form' : form, 'stats' : stats})
+    else:
+        # invalid login
+        if request.user is not None:
+            return HttpResponseRedirect('/')
+        else:
+            return render_to_response('registration/login.html')
+            
+@csrf_exempt
+def login_page_phone(request):
+    if request.method == 'POST':
+        user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
+        if user is not None:
+            if user.is_active:
+                auth.login(request, user)
+                # success
+                return HttpResponseRedirect('/')  
+        else:
+            # disabled account
+            return HttpResponseRedirect('registration/login.html')
+    else:
+        return render_to_response('registration/login.html') 
+
+def logout_page(request):
+    logout(request)
+    return HttpResponseRedirect("/")
+
+def register_page(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(
+                username=form.cleaned_data['username'],
+                password=form.cleaned_data['password1'],
+                email=form.cleaned_data['email']
+            )
+            return HttpResponseRedirect('/')
+    else:
+        form = RegistrationForm()
+
+    variables = RequestContext(request, {'form' : form})
+    return render_to_response('registration/register.html', variables)
+    
 def template_test(request):
     t = get_template('test1.html');
     html = t.render(Context({'message' : "adding message"}))
@@ -45,6 +93,7 @@ def main_page(request):
     output = template.render(variables)
 
     return HttpResponse(output)
+
 
 
 #def main_page(request):

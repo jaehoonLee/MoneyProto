@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %} 가입페이지 {% endblock %}
+{% block head %} 가입하세요. {% endblock %}

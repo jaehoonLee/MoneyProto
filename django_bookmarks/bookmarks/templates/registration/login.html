@@ -3,18 +3,18 @@
     <title>로그인 form</title>
 </head>
 <body>
-{% if form.erros %}
+<!--{% if form.errors %} 
      <p>로그인 과정중 오류가 발생하였습니다.</p>
      <p>ID와 암호를 확인해 주세요</p>
-{% endif %}
+{% endif %}-->
+{{stats}}
 <h2> 사용자 로그인 </h2>
-<form method="POST" action=""> {% csrf_token %}
-<label for="username">사용자 ID </label>
-<input type="text" name="username" value="" id="username">
-<label for="password">사용자 암호 </label>
-<input type="password" name="password" value="" id="password"/>
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next|escape }}" />
+<form method="POST" action="."> {% csrf_token %}
+<p><label for="username">사용자 ID </label><input type="text" name="username" /></p>
+<p><label for="password">사용자 암호 </label><input type="text" name="password"/></p>
+<input type="hidden" name="next" value="/" />
+<input type="submit" value="로그인" />
 </form>
+
 </body>
 </html>

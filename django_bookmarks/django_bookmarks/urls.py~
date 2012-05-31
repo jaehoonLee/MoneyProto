@@ -5,6 +5,8 @@ from django.contrib.auth.views import login, logout
 # Uncomment the next two lines to enable the admin:
 from django.conf.urls.defaults import *
 from bookmarks.views import *
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -16,9 +18,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    ('^bookmarks/$', hello),
-    ('^time/$', current_datetime),
-    ('^accounts/login/$', 'django.contrib.auth.views.login'),
-    #('^accounts/logout/$', logout),
-    ('^test1/$', template_test),
+    url('^bookmarks/$', hello),
+    url('^time/$', current_datetime),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    url(r'^accounts/logout/$', logout_page),
+    url(r'^register/$', register_page),
+    url('^test1/$', template_test),
+    url(r'^$', main_page),
+
+    #adminpage
+    url(r'^admin/', include(admin.site.urls)),
 )
