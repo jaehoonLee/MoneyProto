@@ -8,7 +8,6 @@ class RegistrationForm(forms.Form):
     username = forms.CharField(label='UserName', max_length=30)
     email = forms.EmailField(label='E-mail')
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput())
-    #password1 = forms.CharField(label='Password', max_length=30}
     password2 = forms.CharField(label='Password(Check)', widget=forms.PasswordInput())
 
     def clean_password2(self):
@@ -30,3 +29,7 @@ class RegistrationForm(forms.Form):
             return username
         raise forms.ValidationError('Username already exists.')
             
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=30)
+    password = forms.CharField()

@@ -1,4 +1,0 @@
-<html>
-<div> welcome <h1> {{ user.username }}!! </h1> you are logined! </div>
-
-</html>

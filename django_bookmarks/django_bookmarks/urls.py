@@ -25,6 +25,7 @@ urlpatterns = patterns('',
     url(r'^accounts/loginPhone/$', login_page_phone),
     url(r'^accounts/logout/$', logout_page),
     url(r'^register/$', register_page),
+    url(r'^registerPhone/$', register_page_phone),                       
     url('^test1/$', template_test),
     url(r'^$', main_page),
 
