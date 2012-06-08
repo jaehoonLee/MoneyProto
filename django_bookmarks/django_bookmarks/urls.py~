@@ -18,16 +18,19 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-    url('^bookmarks/$', hello),
     url('^time/$', current_datetime),
     #url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^accounts/login/$', login_page),
     url(r'^accounts/loginPhone/$', login_page_phone),
     url(r'^accounts/logout/$', logout_page),
     url(r'^register/$', register_page),
+    url(r'^registerPhone/$', register_page_phone),                       
     url('^test1/$', template_test),
     url(r'^$', main_page),
 
     #adminpage
     url(r'^admin/', include(admin.site.urls)),
+
+
+    #jangoStudyPage
 )

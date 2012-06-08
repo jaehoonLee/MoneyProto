@@ -1,0 +1,30 @@
+from django.http import *
+from django.shortcuts import *
+from django.http import HttpResponseRedirect
+from django.contrib import auth
+from django.template.loader import get_template
+from django.template import *
+from django.contrib.auth import logout
+from bookmarks.forms import *
+from django.views.decorators.csrf import csrf_exempt
+from django import forms
+from django.forms.util import ErrorList
+from django.core import serializers
+from django.utils import simplejson
+
+
+#def main_page(request):
+#    output = '''
+#    <html>
+#    <head><title>%s</title></head>
+#    <body>
+#    <h1>%s</h1><p>%s</p>
+#    </body>
+#    </html>
+#    '''%(
+#        'django wow',
+#        'django',
+#        'django3',
+#        )
+#    return HttpResponse(output)
+

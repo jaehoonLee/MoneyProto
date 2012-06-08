@@ -1,4 +1,27 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Link(models.Model):
     url = models.URLField(unique=True)
+
+class Bookmark(models.Model):
+    title = models.CharField(max_length=200)
+    user = models.ForeignKey(User)
+    link = models.ForeignKey(Link)
+
+#Real DB For Money
+
+class Person(models.Model):
+    accountID = models.CharField(max_length=20)
+    age = models.CharField(max_length=20)
+    password = models.CharField()
+    pno = models.CharField()
+    sex = models.CharField()
+    uid = models.CharField()
+
+class Card(models.Model):
+    cardID = models.CharField()
+    name = models.CharField()
+    pno = models.CharField()
+    uid = models.CharField()
+

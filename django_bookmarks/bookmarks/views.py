@@ -10,17 +10,10 @@ from bookmarks.forms import *
 from django.views.decorators.csrf import csrf_exempt
 from django import forms
 from django.forms.util import ErrorList
+from django.core import serializers
+from django.utils import simplejson
 import datetime
-
-def hello(request):
-    return HttpResponse("Hello world")
-
-def current_datetime(request):
-    now = datetime.datetime.now()
-    html = "<html><body>it is now %s.</body></html>" % now
-    return HttpResponse(html)
-
-
+from bookmarks.mobileViews import *
 
 @csrf_exempt
 def login_page(request):
@@ -42,45 +35,10 @@ def login_page(request):
         #    return HttpResponseRedirect('/')
         #else:
             return render_to_response('registration/login.html')
-            
-@csrf_exempt
-def login_page_phone(request):
-    if request.method == 'POST':
-        user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
-        if user is not None:
-            if user.is_active:
-                auth.login(request, user)
-                # success
-                return HttpResponse('1')  
-        else:
-            # disabled account
-            return HttpResponse('0')
-    else:
-        return render_to_response('registration/login.html') 
 
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect("/")
-
-@csrf_exempt
-def register_page_phone(request):
-    if request.method == 'POST':
-        form = phoneRegisterForm(request.POST)
-        if form.is_valid():
-            user = User.objects.create_user(
-                username=form.cleaned_data['username'],
-                password=form.cleaned_data['password']
-            )
-            user.first_name = form.cleaned_data['firstname'];
-            user.save()
-            return HttpResponse('1')
-        else:
-            return HttpResponse('0')
-    else:
-        form = RegistrationForm()
-
-    variables = RequestContext(request, {'form' : form})
-    return render_to_response('registration/register.html', variables)
 
 def register_page(request):
     if request.method == 'POST':
@@ -114,19 +72,3 @@ def main_page(request):
 
     return HttpResponse(output)
 
-
-
-#def main_page(request):
-#    output = '''
-#    <html>
-#    <head><title>%s</title></head>
-#    <body>
-#    <h1>%s</h1><p>%s</p>
-#    </body>
-#    </html>
-#    '''%(
-#        'django wow',
-#        'django',
-#        'django3',
-#        )
-#    return HttpResponse(output)
