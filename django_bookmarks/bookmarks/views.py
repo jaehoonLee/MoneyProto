@@ -14,10 +14,26 @@ from django.core import serializers
 from django.utils import simplejson
 import datetime
 from bookmarks.mobileViews import *
+from bookmarks.models import *
 
 @csrf_exempt
 def login_page(request):
     if request.method == 'POST':
+        user = MoneyUser.objects.get(username=request.POST['username'])
+        if user is not None:
+            if user.check_password(request.POST['password']):
+                request.session['userID'] = user.username;
+                return HttpResponseRedirect('/')
+            else:
+                form = LoginForm(request.POST)
+                stats = "your password is wrong"
+        else:
+            form = LoginForm(request.POST)
+            stats = "username doesn't exist"
+
+        return render_to_response('registration/login.html', {'form' : form, 'stats' : stats})
+        
+        '''
         user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
         if user is not None:
             if user.is_active:
@@ -29,6 +45,8 @@ def login_page(request):
             form = LoginForm(request.POST)
             stats = "Your username and password doesn't exist"
             return render_to_response('registration/login.html', {'form' : form, 'stats' : stats})
+        '''
+        
     else:
         # invalid login
         #if request.user is not None:
@@ -37,18 +55,22 @@ def login_page(request):
             return render_to_response('registration/login.html')
 
 def logout_page(request):
-    logout(request)
+    #logout(request)
+    del request.session['userID']
     return HttpResponseRedirect("/")
 
 def register_page(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
+        
         if form.is_valid():
-            user = User.objects.create_user(
+            user = MoneyUser.objects.create_MoneyUser(
                 username=form.cleaned_data['username'],
                 password=form.cleaned_data['password1'],
-                email=form.cleaned_data['email']
-            )
+                sex = form.cleaned_data['sex'],
+                age = form.cleaned_data['age'],
+                )
+            request.session['userID'] = user.username;
             return HttpResponseRedirect('/')
     else:
         form = RegistrationForm()
@@ -65,10 +87,13 @@ def my_view(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/accounts/login/>next=%s' % request.path)
 
+@csrf_exempt
 def main_page(request):
-    template = get_template('main_page.html')
-    variables = Context({'user' : request.user })
-    output = template.render(variables)
-
-    return HttpResponse(output)
-
+    if 'userID' in request.session:
+        username = request.session['userID']
+        template = get_template('main_page.html')
+        variables = Context({'user' : username})
+        output = template.render(variables)
+        return HttpResponse(output)
+    else:
+        return HttpResponseRedirect('/accounts/login/')

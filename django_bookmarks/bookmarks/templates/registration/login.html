@@ -1,12 +1,6 @@
-<html>
-<head>
-    <title>로그인 form</title>
-</head>
-<body>
-<!--{% if form.errors %} 
-     <p>로그인 과정중 오류가 발생하였습니다.</p>
-     <p>ID와 암호를 확인해 주세요</p>
-{% endif %}-->
+{% extends "base.html" %}
+{% block title %} 로그인 form {% endblock %}
+{% block content %}
 {{stats}}
 <h2> 사용자 로그인 </h2>
 <form method="POST" action="."> {% csrf_token %}
@@ -15,6 +9,4 @@
 <input type="hidden" name="next" value="/" />
 <input type="submit" value="로그인" />
 </form>
-
-</body>
-</html>
+{% endblock %}

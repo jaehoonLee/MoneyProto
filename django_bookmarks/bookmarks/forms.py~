@@ -33,3 +33,9 @@ class RegistrationForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=30)
     password = forms.CharField()
+
+
+class phoneRegisterForm(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField()
+    firstname = forms.CharField()

@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib import admin
+from bookmarks.users import *
+from django.core.validators import *
 
 class Link(models.Model):
     url = models.URLField(unique=True)
@@ -10,18 +13,40 @@ class Bookmark(models.Model):
     link = models.ForeignKey(Link)
 
 #Real DB For Money
-
 class Person(models.Model):
     accountID = models.CharField(max_length=20)
     age = models.CharField(max_length=20)
-    password = models.CharField()
-    pno = models.CharField()
-    sex = models.CharField()
-    uid = models.CharField()
+    password = models.CharField(max_length=20)
+    pno = models.CharField(max_length=20)
+    sex = models.CharField(max_length=20)
+    uid = models.CharField(max_length=20)
 
 class Card(models.Model):
-    cardID = models.CharField()
-    name = models.CharField()
-    pno = models.CharField()
-    uid = models.CharField()
+    cardID = models.CharField(max_length=20)
+    name = models.CharField(max_length=20)
+    pno = models.CharField(max_length=20)
+    uid = models.CharField(max_length=20)
 
+class MoneyProfile(models.Model):
+    user = models.ForeignKey(User, unique=True)
+
+    # additional info
+    sex = models.CharField(max_length = 2)
+    pno = models.AutoField(primary_key=True)
+    age = models.IntegerField()
+
+#Money User
+class MoneyUser(models.Model):
+    #required
+    username = models.CharField(max_length = 30, unique=True, validators=[validate_email])
+    password = models.CharField(max_length = 255) 
+    sex = models.CharField(max_length = 2)
+    pno = models.AutoField(primary_key=True)
+    age = models.IntegerField()
+
+    #optional
+    #objects = UserManager()
+
+class MoneyUserAdmin(admin.ModelAdmin):
+    list_display = ('username', 'password', 'sex', 'age')
+admin.site.register(MoneyUser, MoneyUserAdmin)
