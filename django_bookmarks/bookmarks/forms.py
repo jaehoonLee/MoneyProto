@@ -51,3 +51,33 @@ class phoneRegisterForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField()
     firstname = forms.CharField()
+
+#Money Info Forms
+class BackAccountForm(forms.Form):
+    accountID = forms.CharField()
+    accountType = forms.IntegerField()
+    bankCompany = forms.IntegerField()
+    ownerName = models.CharField()
+    title = models.CharField()
+    
+class CashForm(forms.Form):
+    cashID = models.CharField()
+    desc = models.CharField()
+    user = models.CharField()
+
+class CreditCardForm(forms.Form):
+    cardCompany = models.IntegerField()
+    cardID = models.CharField()
+    personPNO = models.CharField()
+    smsPNO = models.CharField()
+    title = models.CharField()
+    type = models.IntegerField()
+    uID = models.CharField()
+    uPWD = models.CharField()
+    userName = models.CharField()
+
+class StockAccountForm(forms.Form):
+    accountID = models.CharField()
+    owner = models.CharField()
+   
+

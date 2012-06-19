@@ -35,7 +35,6 @@ class MoneyProfile(models.Model):
 
 
 #Money User
-
 class MoneyUserManager(models.Manager):
     @classmethod    
     def normalize_email(cls, email):
@@ -138,3 +137,42 @@ class StockAccount(models.Model):
     owner = models.CharField(max_length = 20)
     #subscriber = models.CharField(max_length = 20)
     moneyAccount = models.ForeignKey(MoneyUser)
+
+
+#History for User Money Usage Information
+class BankAccountHistory(models.Model):
+    amount = models.FloatField()
+    date = models.CharField(max_length=15)
+    desc = models.CharField(max_length=30)
+    historyID = models.CharField(max_length = 20)
+    receiverName = models.CharField(max_length = 20)
+    senderName = models.CharField(max_length = 20)
+    type = models.IntegerField()
+    bankAccount = models.ForeignKey(BankAccount)
+    
+class CashHistory(models.Model):
+    amount = models.FloatField()
+    createdDate = models.CharField(max_length=15)
+    desc = models.CharField(max_length=30)
+    historyID = models.CharField(max_length = 20)
+    longtitude = models.FloatField()
+    latitude = models.FloatField()
+    spentDate = models.CharField(max_length=15)
+    store = models.CharField(max_length = 20)
+    cash = models.ForeignKey(Cash)
+    
+class CreditCardHistory(models.Model):
+    amount = models.FloatField()
+    createdDate = models.CharField(max_length=15)
+    desc = models.CharField(max_length=30)
+    historyID = models.CharField(max_length = 20)
+    longtitude = models.FloatField()
+    latitude = models.FloatField()
+    storePNO = models.CharField(max_length = 20)
+    creditCard = models.ForeignKey(CreditCard)
+
+class SAsset(models.Model):
+    assetID = models.CharField(max_length = 30)
+    stockAccount = models.ForeignKey(StockAccount)
+
+
