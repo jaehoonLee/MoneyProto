@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} accounts {% endblock %}
+{% block head %} put accounts {% endblock %}
+{% block content %}
+<form method="post" action="."> {% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="등록" />
+</form>
+{% endblock %}

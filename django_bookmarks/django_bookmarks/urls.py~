@@ -29,7 +29,7 @@ urlpatterns = patterns('',
     #mobile
     url(r'^registerPhone/$', register_page_phone),
     url(r'^accounts/loginPhone/$', login_page_phone),
-
+    url(r'^bankAccount/', bank_account),
     #adminpage
     url(r'^admin/', include(admin.site.urls)),
 )

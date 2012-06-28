@@ -1,0 +1,3402 @@
+Welcome to the Emacs shell
+
+~/MoneyProto/django_bookmarks/bookmarks # cd ..
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> BankAccount.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'BankAccount' has no attribute 'all'
+>>> bA = BankAccount.objects.create(accountID = 'admin', accountType = 5, bankCompany = '“±¹“¹Î“Àº“Çà', ownerName = '“¸Ó“´Ï“ÆÀ', title = 'KB“°è“ÁÂ', moneyAccount= MoneyUser.objects.get(username='jaehoonlee88@gmail.com'))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 382, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 483, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 578, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 1581, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 906, in execute_sql
+    for sql, params in self.as_sql():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 869, in as_sql
+    for obj in self.query.objs
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 296, in get_db_prep_save
+    prepared=False)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 288, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/__init__.py", line 987, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '\xea\xb5\xad\xeb\xaf\xbc\xec\x9d\x80\xed\x96\x89'
+>>> user = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> user.username
+u'jaehoonlee88@gmail.com'
+>>> 	bA = BankAccount.objects.create(accountID = 'admin', accountType = 5, bankCompany = '“±¹“¹Î“Àº“Çà', ownerName = '“¸Ó“´Ï
+  File "<console>", line 1
+    bA = BankAccount.objects.create(accountID = 'admin', accountType = 5, bankCompany = '“±¹“¹Î“Àº“Çà', ownerName = '“¸Ó“´Ï
+   ^
+IndentationError: unexpected indent
+>>>  bA = BankAccount.objects.create(accountID = 'admin', accountType = 2, bankCompany = 4, ownerName = '“¸Ó“´Ï“ÆÀ', title = '“±¹“¹Î“Àº“Çà', moneyAccount = user)
+  File "<console>", line 1
+    bA = BankAccount.objects.create(accountID = 'admin', accountType = 2, bankCompany = 4, ownerName = '“¸Ó“´Ï“ÆÀ', title = '“±¹“¹Î“Àº“Çà', moneyAccount = user)
+   ^
+IndentationError: unexpected indent
+>>>bA = BankAccount.objects.create(accountID = 'admin', accountType = 2, bankCompany = 4, ownerName = '“¸Ó“´Ï“ÆÀ', title = '“±¹“¹Î“Àº“Çà', moneyAccount = user)
+>>> bA.save()
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[18/Jun/2012 20:59:44] "GET / HTTP/1.1" 200 650
+[0m{"success": 1, "title": "“±¹“¹Î“Àº“Çà", "bankCompany": 4, "ownerName": "“¸Ó“´Ï“ÆÀ", "accountType": 2, "accountID": "admin"}
+[35;1m[18/Jun/2012 20:59:48] "GET /bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 500 59973
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[18/Jun/2012 21:00:02] "GET /bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 200 123
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+{'success': 1, 'title': u'\ud604\ub300 \uce74\ub4dc', 'bankCompany': 0, 'ownerName': u'\uc774\uc7ac\ud6c8', 'accountType': 0, 'accountID': u'jhun88'}
+{'success': 1, 'title': u'\uad6d\ubbfc\uc740\ud589', 'bankCompany': 4, 'ownerName': u'\uba38\ub2c8\ud300', 'accountType': 2, 'accountID': u'admin'}
+[m[18/Jun/2012 21:00:25] "GET /bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 200 123
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+{'success': 1, 'title': u'\ud604\ub300 \uce74\ub4dc', 'bankCompany': 0, 'ownerName': u'\uc774\uc7ac\ud6c8', 'accountType': 0, 'accountID': u'jhun88'}
+{'success': 1, 'title': u'\uad6d\ubbfc\uc740\ud589', 'bankCompany': 4, 'ownerName': u'\uba38\ub2c8\ud300', 'accountType': 2, 'accountID': u'admin'}
+[m[18/Jun/2012 21:00:45] "GET /bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 200 252
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[18/Jun/2012 21:01:10] "GET /bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 200 252
+[0m[m[18/Jun/2012 23:31:30] "GET / HTTP/1.1" 200 650
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_card"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"name"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"pno"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uid"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyprofile"[0m (
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mUNIQUE[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"sex"[0m [32mvarchar(2)[0m [33mNOT NULL[0m,
+    [32;1m"pno"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> Cash
+<class 'bookmarks.models.Cash'>
+>>> BankAccount.objects.all()
+[<BankAccount: BankAccount object>, <BankAccount: BankAccount object>]
+>>> user = MoneyUser.objects.create_MoneyUser(username="jhun8802@naver.com", password="1111", sex=1, age=17)
+>>> bA = BankAccount.objects.get(id=1)
+>>> bA.title
+u'\ud604\ub300 \uce74\ub4dc'
+>>> print bA.title
+“Çö“´ë “Ä«“µå
+>>> bA.moneyAccount.add(user)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 587, in add
+    self._add_items(self.source_field_name, self.target_field_name, *objs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 658, in _add_items
+    new_ids = new_ids - set(vals)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 119, in _result_iter
+    self._fill_cache()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 880, in _fill_cache
+    self._result_cache.append(next(self._iter))
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 1066, in iterator
+    for row in self.query.get_compiler(self.db).results_iter():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 760, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 815, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: bookmarks_bankaccount_moneyAccount
+>>> bA.moneyAccount
+<django.db.models.fields.related.ManyRelatedManager object at 0x35f4950>
+>>> bA.moneyAccout.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'BankAccount' object has no attribute 'moneyAccout'
+>>> bA.moneyAccount.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 73, in __repr__
+    data = list(self[:REPR_OUTPUT_SIZE + 1])
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 88, in __len__
+    self._result_cache.extend(self._iter)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 292, in iterator
+    for row in compiler.results_iter():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 760, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 815, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such table: bookmarks_bankaccount_moneyAccount
+>>> quit()
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # cd ..
+~/MoneyProto # ls
+README  django.pth  django_bookmarks
+~/MoneyProto # cd django_bookmarks/
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # rm moneyProto 
+~/MoneyProto/django_bookmarks # 
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table mypage_page
+Creating table django_admin_log
+Creating table bookmarks_link
+Creating table bookmarks_bookmark
+Creating table bookmarks_card
+Creating table bookmarks_moneyprofile
+Creating table bookmarks_moneyuser
+Creating table bookmarks_bankaccount_moneyAccount
+Creating table bookmarks_bankaccount
+Creating table bookmarks_cash_moneyAccount
+Creating table bookmarks_cash
+Creating table bookmarks_creditcard_moneyAccount
+Creating table bookmarks_creditcard
+Creating table bookmarks_stockaccount_moneyAccount
+Creating table bookmarks_stockaccount
+Creating table bookmarks_bankaccounthistory
+Creating table bookmarks_cashhistory
+Creating table bookmarks_creditcardhistory
+Creating table bookmarks_sasset
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'): jhun88
+E-mail address: jaehoonlee88@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[32m[19/Jun/2012 01:16:02] "GET / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 01:16:02] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[32m[19/Jun/2012 01:16:07] "GET /register HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:16:07] "GET /register/ HTTP/1.1" 200 1367
+[0mhello
+[m[19/Jun/2012 01:16:17] "POST /register/ HTTP/1.1" 200 1490
+[0m~/MoneyProto/django_bookmarks # 
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[32m[19/Jun/2012 01:16:45] "GET /admin HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:16:45] "GET /admin/ HTTP/1.1" 200 1896
+[0m[m[19/Jun/2012 01:16:51] "POST /admin/ HTTP/1.1" 200 2055
+[0m[32m[19/Jun/2012 01:16:55] "POST /admin/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:16:55] "GET /admin/ HTTP/1.1" 200 3852
+[0m[m[19/Jun/2012 01:16:57] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 2904
+[0m[m[19/Jun/2012 01:16:57] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mhello
+[m[19/Jun/2012 01:17:11] "POST /register/ HTTP/1.1" 200 1490
+[0m[m[19/Jun/2012 01:17:19] "GET /admin/ HTTP/1.1" 200 3852
+[0m[m[19/Jun/2012 01:17:21] "GET /admin/auth/user/ HTTP/1.1" 200 6090
+[0m[m[19/Jun/2012 01:17:21] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 01:17:28] "GET /admin/ HTTP/1.1" 200 3852
+[0m[m[19/Jun/2012 01:17:29] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 2904
+[0m[m[19/Jun/2012 01:17:29] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 01:17:33] "GET /admin/bookmarks/moneyuser/add/ HTTP/1.1" 200 4714
+[0m[m[19/Jun/2012 01:17:33] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[32m[19/Jun/2012 01:17:43] "POST /admin/bookmarks/moneyuser/add/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:17:43] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4665
+[0m[m[19/Jun/2012 01:17:43] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[32m[19/Jun/2012 01:17:51] "GET / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 01:17:51] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 01:17:55] "POST /accounts/login/ HTTP/1.1" 500 77801
+[0m~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # cd django_bookmarks/
+~/MoneyProto/django_bookmarks/django_bookmarks # ls
+__init__.py  __init__.pyc  settings.py  settings.pyc  settings.py~  urls.py  urls.pyc  urls.py~  wsgi.py  wsgi.pyc
+~/MoneyProto/django_bookmarks/django_bookmarks # python2.7 manage.py sql bookmarks
+/opt/python2.7/bin/python2.7: can't open file 'manage.py': [Errno 2] No such file or directory
+~/MoneyProto/django_bookmarks/django_bookmarks # cd ..
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_card"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"name"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"pno"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uid"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyprofile"[0m (
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mUNIQUE[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"sex"[0m [32mvarchar(2)[0m [33mNOT NULL[0m,
+    [32;1m"pno"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 01:19:52] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 01:19:57] "POST /accounts/login/ HTTP/1.1" 500 77937
+[0m[m[19/Jun/2012 01:21:02] "GET /admin/bookmarks/moneyuser/add/ HTTP/1.1" 200 4714
+[0m[m[19/Jun/2012 01:21:02] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 01:21:06] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4503
+[0m[m[19/Jun/2012 01:21:06] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 01:21:15] "POST /admin/bookmarks/moneyuser/ HTTP/1.1" 200 2195
+[0m[32m[19/Jun/2012 01:21:17] "POST /admin/bookmarks/moneyuser/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:21:18] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 3027
+[0m[m[19/Jun/2012 01:21:18] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[32m[19/Jun/2012 01:21:38] "GET /register HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:21:38] "GET /register/ HTTP/1.1" 200 1367
+[0mhello
+[m[19/Jun/2012 01:21:46] "POST /register/ HTTP/1.1" 200 1490
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> MoneyUser.objects.all()
+[]
+>>> MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> user = MoneyUser.object.get(username='jaehoonlee88@gmail.com')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'MoneyUser' has no attribute 'object'
+>>>user = MoneyUser.objects.get(username='jaehoonlee88@gmail.com') 
+>>> user
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+hello
+[35;1m[19/Jun/2012 01:27:31] "POST /register/ HTTP/1.1" 500 79039
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 01:28:31] "GET /register/ HTTP/1.1" 200 1367
+[0mhello
+[32m[19/Jun/2012 01:28:37] "POST /register/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:28:37] "GET / HTTP/1.1" 200 650
+[0m[32m[19/Jun/2012 01:28:43] "GET /accounts/logout HTTP/1.1" 301 0
+[0m[32m[19/Jun/2012 01:28:43] "GET /accounts/logout/ HTTP/1.1" 302 0
+[0m[32m[19/Jun/2012 01:28:44] "GET / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 01:28:44] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[32m[19/Jun/2012 01:28:47] "GET /register HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:28:47] "GET /register/ HTTP/1.1" 200 1367
+[0mhello
+[32m[19/Jun/2012 01:28:56] "POST /register/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:28:56] "GET / HTTP/1.1" 200 646
+[0m[32m[19/Jun/2012 01:29:03] "GET /admin HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:29:03] "GET /admin/ HTTP/1.1" 200 4445
+[0m[m[19/Jun/2012 01:29:05] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4867
+[0m[m[19/Jun/2012 01:29:05] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> quit()
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # rm moneyProto 
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table mypage_page
+Creating table django_admin_log
+Creating table bookmarks_link
+Creating table bookmarks_bookmark
+Creating table bookmarks_moneyuser
+Creating table bookmarks_bankaccount_moneyAccount
+Creating table bookmarks_bankaccount
+Creating table bookmarks_cash_moneyAccount
+Creating table bookmarks_cash
+Creating table bookmarks_creditcard_moneyAccount
+Creating table bookmarks_creditcard
+Creating table bookmarks_stockaccount_moneyAccount
+Creating table bookmarks_stockaccount
+Creating table bookmarks_bankaccounthistory
+Creating table bookmarks_cashhistory
+Creating table bookmarks_creditcardhistory
+Creating table bookmarks_sasset
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'): jhun88
+E-mail address: jaehoonlee88@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[32m[19/Jun/2012 01:40:42] "GET /admin HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:40:42] "GET /admin/ HTTP/1.1" 200 1896
+[0m[32m[19/Jun/2012 01:40:43] "GET /register HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:40:43] "GET /register/ HTTP/1.1" 200 1367
+[0mhello
+[32m[19/Jun/2012 01:40:51] "POST /register/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:40:51] "GET / HTTP/1.1" 200 650
+[0m[32m[19/Jun/2012 01:40:59] "GET /register HTTP/1.1" 301 0
+[0m[m[19/Jun/2012 01:41:00] "GET /register/ HTTP/1.1" 200 1367
+[0mhello
+[32m[19/Jun/2012 01:41:08] "POST /register/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 01:41:08] "GET / HTTP/1.1" 200 646
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> user = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> user2 = MoneyUser.objects.get(username='jhun8802@naver.com')
+>>> user.username
+u'jaehoonlee88@gmail.com'
+>>> bA = BankAccount.objects.create('jhun88', 1, 2, '“ÀÌ“Àç“ÈÆ', '“Çö“´ë “Ä«“µå', user)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: create() takes exactly 1 argument (7 given)
+>>>bA = BankAccount.objects.create(accountID='jhun88', accountType=1, bankCompany=2, ownerName='“ÀÌ“Àç“ÈÆ', title='“Çö“´ë “Ä«“µå', 'moneyAccount'=user)
+  File "<console>", line 1
+SyntaxError: keyword can't be an expression
+>>> A = BankAccount.objects.create(accountID='jhun88', accountType=1, bankCompany=2, ownerName='“ÀÌ“Àç“ÈÆ', title='“Çö“´ë “Ä«“µå', 'moneyAccount'=user)
+  File "<console>", line 1
+SyntaxError: keyword can't be an expression
+>>> bA = BankAccount.objects.create(accountID='jhun88', accountType=1, bankCompany=2, ownerName='“ÀÌ“Àç“ÈÆ', title='“Çö“´ë “Ä«“µå', 'moneyAccount'=user)
+  File "<console>", line 1
+SyntaxError: keyword can't be an expression
+>>>bA = BankAccount.objects.create(accountID='jhun88',accountType=1,bankCompany=2,ownerName='“ÀÌ“Àç“ÈÆ',title='“Çö“´ë “Ä«“µå',moneyAccount=user)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 380, in create
+    obj = self.model(**kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 367, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % kwargs.keys()[0])
+TypeError: 'moneyAccount' is an invalid keyword argument for this function
+>>> A = BankAccount.objects.create(accountID='jhun88',accountType=1,bankCompany=2,ownerName='“ÀÌ“Àç“ÈÆ',title='“Çö“´ë “Ä«“µå')
+>>> A.moneyAccount
+<django.db.models.fields.related.ManyRelatedManager object at 0x17de3e50>
+>>> A.moneyAccount.add(user)
+>>> A.moneyAccount.add(user2)
+>>> A.moneyAccount.all()
+[<MoneyUser: jaehoonlee88@gmail.com>, <MoneyUser: jhun8802@naver.com>]
+>>> user.bankaccount_set.all()
+[<BankAccount: BankAccount object>]
+>>> A.save()
+>>> bA = BankAccount.objects.create(accountID='jhun88',accountType=1,bankCompany=5,ownerName='“ÀÌ“Àç“ÈÆ',title='“±¹“¹Î “Ä«“µå')
+>>> bA.moneyAccount.add(user)
+>>> bA.save()
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 02:23:00] "GET /bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 200 254
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 02:27:43] "GET /register HTTP/1.1" 200 1367
+[0m[m[19/Jun/2012 02:27:47] "GET /register/ HTTP/1.1" 200 1367
+[0m[m[19/Jun/2012 02:27:49] "GET /register/ HTTP/1.1" 200 1367
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 02:28:07] "GET /register/ HTTP/1.1" 200 1367
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 02:37:33] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 1936
+[0m[32m[19/Jun/2012 02:37:38] "POST /admin/bookmarks/moneyuser/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 02:37:38] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4867
+[0m[m[19/Jun/2012 02:37:38] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mUnhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x19241e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 111, in inner_run
+    ipv6=self.use_ipv6, threading=threading)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 207, in run
+    httpd.serve_forever()
+  File "/opt/python2.7/lib/python2.7/SocketServer.py", line 225, in serve_forever
+    r, w, e = select.select([self], [], [], poll_interval)
+AttributeError: 'NoneType' object has no attribute 'select'
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[33m[19/Jun/2012 02:41:29] "GET /register/ HTTP/1.1" 404 2742
+[0m[m[19/Jun/2012 02:41:32] "GET /register HTTP/1.1" 200 1367
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[33m[19/Jun/2012 02:50:30] "GET /jhun88/bankAccount HTTP/1.1" 404 2774
+[0m[33m[19/Jun/2012 02:50:43] "GET /jhun88/bankAccount/ HTTP/1.1" 404 2777
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[33m[19/Jun/2012 02:51:24] "GET /jhun88/bankAccount/ HTTP/1.1" 404 2779
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 02:52:16] "GET /jhun88/bankAccount/ HTTP/1.1" 500 51064
+[0m[35;1m[19/Jun/2012 02:52:32] "GET /jhun88/bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 500 51368
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 02:54:58] "GET /jhun88/bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 500 51563
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 02:58:10] "GET /jhun88/bankAccount/?username=jaehoonlee88@gmail.com HTTP/1.1" 200 254
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 02:58:53] "GET /0/bankAccount/ HTTP/1.1" 500 58288
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from MoneyUser.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ImportError: No module named MoneyUser.models
+>>> from bookmarks.models import *
+>>> MoneyUser
+<class 'bookmarks.models.MoneyUser'>
+>>> MoneyUser.objects.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+TypeError: get() got an unexpected keyword argument 'id'
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 03:04:38] "GET /0/bankAccount/ HTTP/1.1" 500 61482
+[0m[m[19/Jun/2012 03:04:42] "GET /1/bankAccount/ HTTP/1.1" 200 254
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 05:48:42] "GET /1 HTTP/1.1" 200 1
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x3822e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 107
+    class BankAccount(models.Model):
+        ^
+IndentationError: expected an indented block
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/__init__.py", line 381, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 196, in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 231, in execute
+    self.validate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 116, in <module>
+    class uuidTable(models.Model):
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 117, in uuidTable
+    uuid = CharField(primary_key=True, editable=False)
+NameError: name 'CharField' is not defined
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+[31;1mError: One or more models did not validate:
+[31;1mbookmarks.uuidtable: "uuid": CharFields require a "max_length" attribute that is a positive integer.
+[0m
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Creating table bookmarks_uuidtable
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"uuid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 112, in create_uuid
+    uuid = str(uuid.uuid4())
+UnboundLocalError: local variable 'uuid' referenced before assignment
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"uuid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 112, in create_uuid
+    uuid_value = str(uuid.uuid4())
+NameError: global name 'uuid' is not defined
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import (
+... ;
+  File "<console>", line 2
+    ;
+    ^
+SyntaxError: invalid syntax
+>>> from bookmarks.models import *
+>>> uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 112, in create_uuid
+    uuid_value = str(uuid.uuid4())
+NameError: global name 'uuid' is not defined
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"uid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> uuidTable.objects.create_uuid()
+<uuidTable: uuidTable object>
+>>> a = uuidTable.objects.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 359, in get
+    clone = self.filter(*args, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 626, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 644, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1241, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1112, in add_filter
+    process_extras=process_extras)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/query.py", line 1307, in setup_joins
+    "Choices are: %s" % (name, ", ".join(names)))
+FieldError: Cannot resolve keyword 'id' into field. Choices are: uid
+>>> uuidTable.object.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'uuidTable' has no attribute 'object'
+>>> uuidTable.objects.get(uid = '1)
+  File "<console>", line 1
+    uuidTable.objects.get(uid = '1)
+                                  ^
+SyntaxError: EOL while scanning string literal
+>>> a = uidTable.objects.get(uid = '1') 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'uidTable' is not defined
+>>> a = uuidTable.objects.get(uid = '1')
+  File "<console>", line 1
+    a = uuidTable.objects.get(uid = '1')
+   ^
+IndentationError: unexpected indent
+>>>a = uidTable.objects.get(uid = '1')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'uidTable' is not defined
+>>>a = uuidTable.objects.get(uid = '1')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 362, in get
+    num = len(clone)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 86, in __len__
+    self._result_cache = list(self.iterator())
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 292, in iterator
+    for row in compiler.results_iter():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 760, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 815, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+DatabaseError: no such column: bookmarks_uuidtable.uid
+>>>b = uuidTable.objects.create_uuid()
+>>> b.uid
+'1'
+>>> c = uuidTable.objects.create_uuid()
+>>> c.uid
+'1'
+>>> b.uid
+'1'
+>>> quit()
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # rm moneyProto 
+~/MoneyProto/django_bookmarks # 
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table mypage_page
+Creating table django_admin_log
+Creating table bookmarks_link
+Creating table bookmarks_bookmark
+Creating table bookmarks_moneyuser
+Creating table bookmarks_uuidtable
+Creating table bookmarks_bankaccount_moneyAccount
+Creating table bookmarks_bankaccount
+Creating table bookmarks_cash_moneyAccount
+Creating table bookmarks_cash
+Creating table bookmarks_creditcard_moneyAccount
+Creating table bookmarks_creditcard
+Creating table bookmarks_stockaccount_moneyAccount
+Creating table bookmarks_stockaccount
+Creating table bookmarks_bankaccounthistory
+Creating table bookmarks_cashhistory
+Creating table bookmarks_creditcardhistory
+Creating table bookmarks_sasset
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'): jhun88
+E-mail addrejaehoo
+Error: That e-mail address is invalid.
+E-mail address: jaehoonlee88@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"uid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> a = uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'uuidTable' is not defined
+>>> from bookmarks.models. import *
+  File "<console>", line 1
+    from bookmarks.models. import *
+                                ^
+SyntaxError: invalid syntax
+>>> from bookmarks.models import *
+>>> a = uuidtable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'uuidtable' is not defined
+>>> uuidTable
+<class 'bookmarks.models.uuidTable'>
+>>> a  = uuidtable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'uuidtable' is not defined
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> a = uuidTable.objects.create_uuid()
+>>> a.uid
+'1'
+>>> b = uuidTable.objects.create_uuid()
+>>> b.uid
+'1'
+>>> a.uid = '2'
+>>> a.uid
+'2'
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/__init__.py", line 381, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 196, in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 232, in execute
+    output = self.handle(*args, **options)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 368, in handle
+    return self.handle_noargs(**options)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/shell.py", line 46, in handle_noargs
+    get_models()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 181, in get_models
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 118
+    raise ValueError('value doesn't exists')
+                                  ^
+SyntaxError: invalid syntax
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>from bookmarks.models import *
+>>>a  = uuidTable.objects.create_uuid()
+  File "<console>", line 1
+    = uuidTable.objects.create_uuid()
+   ^
+IndentationError: unexpected indent
+>>>a= uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 118, in create_uuid
+    raise ValueError('value doesn\'t exists')
+ValueError: value doesn't exists
+>>> a = uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 118, in create_uuid
+    raise ValueError('value doesn\'t exists')
+ValueError: value doesn't exists
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>from bookmarks.models import *
+>>>a = uuidTable.objects.create_uuid()
+  File "<console>", line 1
+    = uuidTable.objects.create_uuid()
+    ^
+SyntaxError: invalid syntax
+>>> a = uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 118, in create_uuid
+    raise ValueError('value doesn\'t exists')
+ValueError: value doesn't exists
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> a = uuidTable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 116, in create_uuid
+    raise ValueError('value exists')
+ValueError: value exists
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> a = uuidTable.objects.create_uuid()
+>>> a.uid
+'830807d8-a9ac-482b-b737-6dced2c890d4'
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py run
+Unknown command: 'run'
+Type 'manage.py help' for usage.
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x1cb8ee10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 127, in <module>
+    admin.site.register(uuidTable, uuidTableAdmin)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 92, in register
+    validate(admin_class, model)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 29, in validate
+    check_isseq(cls, 'list_display', cls.list_display)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 370, in check_isseq
+    raise ImproperlyConfigured("'%s.%s' must be a list or tuple." % (cls.__name__, label))
+django.core.exceptions.ImproperlyConfigured: 'uuidTableAdmin.list_display' must be a list or tuple.
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/__init__.py", line 381, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 196, in run_from_argv
+    self.execute(*args, **options.__dict__)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 231, in execute
+    self.validate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 127, in <module>
+    admin.site.register(uuidTable, uuidTableAdmin)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 92, in register
+    validate(admin_class, model)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 29, in validate
+    check_isseq(cls, 'list_display', cls.list_display)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 370, in check_isseq
+    raise ImproperlyConfigured("'%s.%s' must be a list or tuple." % (cls.__name__, label))
+django.core.exceptions.ImproperlyConfigured: 'uuidTableAdmin.list_display' must be a list or tuple.
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"uid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[32m[19/Jun/2012 06:59:36] "GET / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 06:59:36] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[m[19/Jun/2012 06:59:37] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 06:59:37] "GET /admin HTTP/1.1" 200 1
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:00:23] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:00:24] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:00:41] "GET /register HTTP/1.1" 200 1367
+[0m[m[19/Jun/2012 07:00:42] "GET /register HTTP/1.1" 200 1367
+[0m[m[19/Jun/2012 07:00:47] "GET /admin HTTP/1.1" 200 1
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 07:00:59] "GET /admin HTTP/1.1" 500 99312
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 07:01:41] "GET /admin HTTP/1.1" 500 98967
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:02:00] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:02:02] "GET /admin HTTP/1.1" 200 1
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 07:02:14] "GET /admin HTTP/1.1" 500 98989
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:02:23] "GET /admin/ HTTP/1.1" 200 1896
+[0m[32m[19/Jun/2012 07:02:42] "POST /admin/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:02:42] "GET /admin/ HTTP/1.1" 200 3852
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:02:50] "GET /admin/ HTTP/1.1" 200 4251
+[0m[35;1m[19/Jun/2012 07:02:52] "GET /admin/bookmarks/uuidtable/ HTTP/1.1" 500 143809
+[0mValidating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0xfa48e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 127, in <module>
+    admin.site.register(uuidTable, uuidTableAdmin)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 92, in register
+    validate(admin_class, model)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 29, in validate
+    check_isseq(cls, 'list_display', cls.list_display)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 370, in check_isseq
+    raise ImproperlyConfigured("'%s.%s' must be a list or tuple." % (cls.__name__, label))
+django.core.exceptions.ImproperlyConfigured: 'uuidTableAdmin.list_display' must be a list or tuple.
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x10aede10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 100, in <module>
+    class MoneyUser(models.Model):
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 109, in MoneyUser
+    uidT = models.oneToOneField(uuidTable)
+AttributeError: 'module' object has no attribute 'oneToOneField'
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:09:20] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:09:28] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:09:29] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 07:09:35] "POST /accounts/login/ HTTP/1.1" 500 70600
+[0m[m[19/Jun/2012 07:09:46] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:09:48] "GET /admin/ HTTP/1.1" 200 3852
+[0m[35;1m[19/Jun/2012 07:09:53] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 500 146255
+[0m
+
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # rm moneyProto 
+~/MoneyProto/django_bookmarks # 
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table mypage_page
+Creating table django_admin_log
+Creating table bookmarks_link
+Creating table bookmarks_bookmark
+Creating table bookmarks_uuidtable
+Creating table bookmarks_moneyuser
+Creating table bookmarks_bankaccount_moneyAccount
+Creating table bookmarks_bankaccount
+Creating table bookmarks_cash_moneyAccount
+Creating table bookmarks_cash
+Creating table bookmarks_creditcard_moneyAccount
+Creating table bookmarks_creditcard
+Creating table bookmarks_stockaccount_moneyAccount
+Creating table bookmarks_stockaccount
+Creating table bookmarks_bankaccounthistory
+Creating table bookmarks_cashhistory
+Creating table bookmarks_creditcardhistory
+Creating table bookmarks_sasset
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'): jhun88
+E-mail address: jaehoonlee88@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"uid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uidT_id"[0m [32minteger[0m [33mNOT NULL[0m [33mUNIQUE[0m [33mREFERENCES[0m [1m"bookmarks_uuidtable"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[32m[19/Jun/2012 07:10:51] "GET / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:10:51] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[m[19/Jun/2012 07:10:54] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:11:01] "POST / HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:11:01] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 07:11:08] "POST /accounts/login/ HTTP/1.1" 500 70528
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:11:36] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:11:42] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:11:42] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 07:11:48] "POST /accounts/login/ HTTP/1.1" 500 70528
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:12:17] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:12:23] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:12:23] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x1aec9e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 129, in <module>
+    admin.site.register(MoneyUser, MoneyUserAdmin)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 92, in register
+    validate(admin_class, model)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 38, in validate
+    % (cls.__name__, idx, field, cls.__name__, model._meta.object_name))
+django.core.exceptions.ImproperlyConfigured: MoneyUserAdmin.list_display[4], 'uidT' is not a callable or an attribute of 'MoneyUserAdmin' or found in the model 'MoneyUser'.
+~/MoneyProto/django_bookmarks # rm moneyProto 
+~/MoneyProto/django_bookmarks # 
+~/MoneyProto/django_bookmarks # python2.7 manage.py syncdb
+Creating tables ...
+Creating table auth_permission
+Creating table auth_group_permissions
+Creating table auth_group
+Creating table auth_user_user_permissions
+Creating table auth_user_groups
+Creating table auth_user
+Creating table django_content_type
+Creating table django_session
+Creating table django_site
+Creating table mypage_page
+Creating table django_admin_log
+Creating table bookmarks_link
+Creating table bookmarks_bookmark
+Creating table bookmarks_uuidtable
+Creating table bookmarks_moneyuser
+Creating table bookmarks_bankaccount_moneyAccount
+Creating table bookmarks_bankaccount
+Creating table bookmarks_cash_moneyAccount
+Creating table bookmarks_cash
+Creating table bookmarks_creditcard_moneyAccount
+Creating table bookmarks_creditcard
+Creating table bookmarks_stockaccount_moneyAccount
+Creating table bookmarks_stockaccount
+Creating table bookmarks_bankaccounthistory
+Creating table bookmarks_cashhistory
+Creating table bookmarks_creditcardhistory
+Creating table bookmarks_sasset
+
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'root'): jhun88
+E-mail address: jaehoonlee88@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+Installing custom SQL ...
+Installing indexes ...
+Installed 0 object(s) from 0 fixture(s)
+~/MoneyProto/django_bookmarks # ls
+bookmarks  django_bookmarks  manage.py  moneyProto  mypage
+~/MoneyProto/django_bookmarks # python2.7 manage.py sql bookmarks
+[33mBEGIN;[0m
+[33mCREATE TABLE[0m [1m"bookmarks_link"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"url"[0m [32mvarchar(200)[0m [33mNOT NULL[0m [33mUNIQUE[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bookmark"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"title"[0m [32mvarchar(200)[0m [33mNOT NULL[0m,
+    [32;1m"user_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"auth_user"[0m ([32;1m"id"[0m),
+    [32;1m"link_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_link"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_uuidtable"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"uid"[0m [32mvarchar(64)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_moneyuser"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"username"[0m [32mvarchar(30)[0m [33mNOT NULL[0m [33mUNIQUE[0m,
+    [32;1m"password"[0m [32mvarchar(255)[0m [33mNOT NULL[0m,
+    [32;1m"sex"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"age"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uidT_id"[0m [32minteger[0m [33mNOT NULL[0m [33mUNIQUE[0m [33mREFERENCES[0m [1m"bookmarks_uuidtable"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"bankaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"bankaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"accountType"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"ownerName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"cash_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cash"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cashID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(40)[0m [33mNOT NULL[0m,
+    [32;1m"user"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"creditcard_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"creditcard_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcard"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"cardCompany"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"cardID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"personPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"smsPNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"title"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"uID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"uPWD"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"userName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"thisMonthAmount"[0m [32mreal[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount_moneyAccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"stockaccount_id"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"moneyuser_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_moneyuser"[0m ([32;1m"id"[0m),
+    [33mUNIQUE[0m ([32;1m"stockaccount_id"[0m, [32;1m"moneyuser_id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_stockaccount"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"accountID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"owner"[0m [32mvarchar(20)[0m [33mNOT NULL[0m
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_bankaccounthistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"date"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"receiverName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"senderName"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"type"[0m [32minteger[0m [33mNOT NULL[0m,
+    [32;1m"bankAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_bankaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_cashhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"spentDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"store"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"cash_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_cash"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_creditcardhistory"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"amount"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"createdDate"[0m [32mvarchar(15)[0m [33mNOT NULL[0m,
+    [32;1m"desc"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"historyID"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"longtitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"latitude"[0m [32mreal[0m [33mNOT NULL[0m,
+    [32;1m"storePNO"[0m [32mvarchar(20)[0m [33mNOT NULL[0m,
+    [32;1m"creditCard_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_creditcard"[0m ([32;1m"id"[0m)
+)
+;
+[33mCREATE TABLE[0m [1m"bookmarks_sasset"[0m (
+    [32;1m"id"[0m [32minteger[0m [33mNOT NULL[0m [33mPRIMARY KEY[0m,
+    [32;1m"assetID"[0m [32mvarchar(30)[0m [33mNOT NULL[0m,
+    [32;1m"stockAccount_id"[0m [32minteger[0m [33mNOT NULL[0m [33mREFERENCES[0m [1m"bookmarks_stockaccount"[0m ([32;1m"id"[0m)
+)
+;
+[33mCOMMIT;[0m
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> a = MoneyUser.create_MoneyUser(username='a@a.net', password='1111', sex=0, age=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'MoneyUser' has no attribute 'create_MoneyUser'
+>>>a = MoneyUser.objects.create_MoneyUser(username='a@a.net', password='1111', sex=0, age=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 79, in create_MoneyUser
+    user.save()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 483, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 578, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 1581, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 907, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: bookmarks_moneyuser.uidT_id may not be NULL
+>>> a = uuidTable.objects.create_uuid()
+>>> a
+<uuidTable: uuidTable object>
+>>> a.id
+>>> a.uid
+'e1dc9c12-a127-4ce5-a077-05d0b67b832a'
+>>> quit(0
+... 
+... )
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> 
+KeyboardInterrupt
+>>> from bookmarks.models import *
+>>>  = MoneyUser.objects.create_MoneyUser(username='a@a.net', password='1111', sex=0, age=0)
+  File "<console>", line 1
+    = MoneyUser.objects.create_MoneyUser(username='a@a.net', password='1111', sex=0, age=0)
+   ^
+IndentationError: unexpected indent
+>>> a = MoneyUser.objects.create_MoneyUser(username='a@a.net', password='1111', sex=0, age=0)
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:18:16] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:18:21] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:18:21] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 07:18:29] "POST /accounts/login/ HTTP/1.1" 500 70548
+[0m[32m[19/Jun/2012 07:18:40] "POST /accounts/login/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:18:40] "GET / HTTP/1.1" 200 635
+[0m[m[19/Jun/2012 07:19:11] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:19:15] "GET /admin/ HTTP/1.1" 200 1896
+[0m[m[19/Jun/2012 07:19:17] "POST /admin/ HTTP/1.1" 200 2030
+[0m[32m[19/Jun/2012 07:19:21] "POST /admin/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:19:22] "GET /admin/ HTTP/1.1" 200 3852
+[0m[m[19/Jun/2012 07:19:24] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 3753
+[0m[m[19/Jun/2012 07:19:24] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 07:19:31] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 3753
+[0m[m[19/Jun/2012 07:19:31] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:19:44] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4560
+[0m[m[19/Jun/2012 07:19:44] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 07:19:59] "GET /register HTTP/1.1" 200 1367
+[0m[m[19/Jun/2012 07:20:05] "POST / HTTP/1.1" 200 635
+[0m[m[19/Jun/2012 07:20:13] "GET /login HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:20:14] "GET /logout HTTP/1.1" 200 1
+[0m[33m[19/Jun/2012 07:20:17] "GET /logout/ HTTP/1.1" 404 2879
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:20:26] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[32m[19/Jun/2012 07:20:28] "GET /accounts/logout HTTP/1.1" 301 0
+[0m[32m[19/Jun/2012 07:20:28] "GET /accounts/logout/ HTTP/1.1" 302 0
+[0m[32m[19/Jun/2012 07:20:28] "GET / HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:20:28] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[35;1m[19/Jun/2012 07:20:43] "POST /accounts/login/ HTTP/1.1" 500 70549
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import bookmarks.models import *
+  File "<console>", line 1
+    import bookmarks.models import *
+                                 ^
+SyntaxError: invalid syntax
+>>> from bookmarks.models import *
+>>> a = MoneyUser.objects.create_user(username='jaehoonlee88@gmail.com', password='1111', sex=0, age=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'MoneyUserManager' object has no attribute 'create_user'
+>>>  = MoneyUser.objects.create_user(username='jaehoonlee88@gmail.com', password='1111', sex=0, age=0)
+  File "<console>", line 1
+    = MoneyUser.objects.create_user(username='jaehoonlee88@gmail.com', password='1111', sex=0, age=0)
+   ^
+IndentationError: unexpected indent
+>>> a = MoneyUser.objects.create_MoneyUser(username='jaehoonlee88@gmail.com', password='1111', sex=0, age=0)
+>>> a
+<MoneyUser: jaehoonlee88@gmail.com>
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:23:50] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:24:01] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:24:01] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m[m[19/Jun/2012 07:24:04] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:24:05] "GET /admin/ HTTP/1.1" 200 3852
+[0m[m[19/Jun/2012 07:24:06] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4854
+[0m[m[19/Jun/2012 07:24:06] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 07:24:11] "POST /admin/bookmarks/moneyuser/ HTTP/1.1" 200 2195
+[0m[32m[19/Jun/2012 07:24:13] "POST /admin/bookmarks/moneyuser/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:24:13] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4683
+[0m[m[19/Jun/2012 07:24:13] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x160a1e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 98, in <module>
+    class MoneyUser(models.Model):
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 107, in MoneyUser
+    uidT = models.OneToOneField(uuidTable, primaryKey=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 1045, in __init__
+    super(OneToOneField, self).__init__(to, to_field, OneToOneRel, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 937, in __init__
+    Field.__init__(self, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'primaryKey'
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:25:28] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:25:33] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:25:33] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:26:42] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:26:47] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:26:47] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:32:00] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:32:06] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:32:06] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:32:24] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:32:29] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:32:30] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:33:04] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:33:11] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:33:11] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:33:35] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:33:42] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:33:42] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:34:28] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:34:33] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:34:33] "GET /accounts/login/ HTTP/1.1" 200 916
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:34:58] "GET /register HTTP/1.1" 200 1367
+[0m[32m[19/Jun/2012 07:35:08] "POST / HTTP/1.1" 302 0
+[0m/opt/python2.7/lib/python2.7/site-packages/django/template/defaulttags.py:55: UserWarning: A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.
+  warnings.warn("A {% csrf_token %} was used in a template, but the context did not provide the value.  This is usually caused by not using RequestContext.")
+[m[19/Jun/2012 07:35:08] "GET /accounts/login/ HTTP/1.1" 200 916
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:36:16] "GET /register HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:36:18] "GET /register/ HTTP/1.1" 200 1367
+[0mHello3
+Hello2
+hello
+Hello
+Userjaehoonlee88@gmail.com
+[32m[19/Jun/2012 07:36:26] "POST /register/ HTTP/1.1" 302 0
+[0m[m[19/Jun/2012 07:36:26] "GET / HTTP/1.1" 200 650
+[0m[m[19/Jun/2012 07:36:34] "GET / HTTP/1.1" 200 650
+[0m[m[19/Jun/2012 07:36:34] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:36:35] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:36:38] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:36:38] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:36:40] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4995
+[0m[m[19/Jun/2012 07:36:40] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x1ea57e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 130, in <module>
+    admin.site.register(MoneyUser, MoneyUserAdmin)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 92, in register
+    validate(admin_class, model)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 38, in validate
+    % (cls.__name__, idx, field, cls.__name__, model._meta.object_name))
+django.core.exceptions.ImproperlyConfigured: MoneyUserAdmin.list_display[4], 'uidT.uid' is not a callable or an attribute of 'MoneyUserAdmin' or found in the model 'MoneyUser'.
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:39:15] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 3758
+[0m[m[19/Jun/2012 07:39:15] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:39:35] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 4995
+[0m[m[19/Jun/2012 07:39:35] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 07:39:39] "GET /admin/bookmarks/moneyuser/5cc3bb12-fb22-4168-8860-0c7ee6b2c11a/ HTTP/1.1" 200 5431
+[0m[m[19/Jun/2012 07:39:39] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x39f1e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 111, in inner_run
+    ipv6=self.use_ipv6, threading=threading)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 207, in run
+    httpd.serve_forever()
+  File "/opt/python2.7/lib/python2.7/SocketServer.py", line 225, in serve_forever
+    r, w, e = select.select([self], [], [], poll_interval)
+AttributeError: 'NoneType' object has no attribute 'select'
+Validating models...
+
+Unhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x1a9d4e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 91, in inner_run
+    self.validate(display_num_errors=True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/base.py", line 263, in validate
+    num_errors = get_validation_errors(s, app)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/validation.py", line 30, in get_validation_errors
+    for (app_name, error) in get_app_errors().items():
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 158, in get_app_errors
+    self._populate()
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 64, in _populate
+    self.load_app(app_name, True)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/loading.py", line 88, in load_app
+    models = import_module('.models', app_name)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/root/MoneyProto/django_bookmarks/bookmarks/models.py", line 133, in <module>
+    admin.site.register(MoneyUser, MoneyUserAdmin)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 92, in register
+    validate(admin_class, model)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/contrib/admin/validation.py", line 38, in validate
+    % (cls.__name__, idx, field, cls.__name__, model._meta.object_name))
+django.core.exceptions.ImproperlyConfigured: MoneyUserAdmin.list_display[4], 'uid' is not a callable or an attribute of 'MoneyUserAdmin' or found in the model 'MoneyUser'.
+~/MoneyProto/django_bookmarks # 
+~/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:43:23] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:43:23] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:43:25] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 3758
+[0m[m[19/Jun/2012 07:43:25] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:46:24] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 07:46:24] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:46:26] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 5130
+[0m[m[19/Jun/2012 07:46:26] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:46:59] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:46:59] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:47:00] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 5130
+[0m[m[19/Jun/2012 07:47:00] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:49:56] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 5147
+[0m[m[19/Jun/2012 07:49:57] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 07:56:20] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 5130
+[0m[m[19/Jun/2012 07:56:20] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 07:56:24] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 07:56:25] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 5130
+[0m[m[19/Jun/2012 07:56:25] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 08:05:30] "GET / HTTP/1.1" 200 679
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 08:07:46] "GET / HTTP/1.1" 500 74296
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 08:08:13] "GET / HTTP/1.1" 500 74324
+[0m~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> a = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> a.uidT
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 356, in __get__
+    rel_obj = qs.get(**params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 369, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: uuidTable matching query does not exist. Lookup parameters were {'uid__exact': u'5cc3bb12-fb22-4168-8860-0c7ee6b2c11a'}
+>>> quit()
+~/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import * 
+>>> a = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> a.uidT
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 356, in __get__
+    rel_obj = qs.get(**params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 369, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: uuidTable matching query does not exist. Lookup parameters were {'uid__exact': u'5cc3bb12-fb22-4168-8860-0c7ee6b2c11a'}
+>>> b = uuidTable.objects.create_uuid()
+>>> b
+<uuidTable: uuidTable object>
+>>> a.uidT = b
+>>> a.uidT
+<uuidTable: uuidTable object>
+>>> quit()
+/root/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 08:21:49] "GET / HTTP/1.1" 500 74324
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 08:22:19] "GET / HTTP/1.1" 500 74310
+[0m[35;1m[19/Jun/2012 08:22:29] "GET / HTTP/1.1" 500 74310
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 08:22:44] "GET / HTTP/1.1" 200 679
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 08:23:05] "GET / HTTP/1.1" 200 679
+[0m[m[19/Jun/2012 08:23:20] "GET / HTTP/1.1" 200 685
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 08:24:03] "GET / HTTP/1.1" 500 75804
+[0m[m[19/Jun/2012 08:24:25] "GET / HTTP/1.1" 200 685
+[0m[m[19/Jun/2012 08:24:35] "GET /admin HTTP/1.1" 200 1
+[0m[m[19/Jun/2012 08:24:38] "GET /admin/ HTTP/1.1" 200 4148
+[0m[m[19/Jun/2012 08:24:39] "GET /admin/bookmarks/moneyuser/ HTTP/1.1" 200 5130
+[0m[m[19/Jun/2012 08:24:39] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0m[m[19/Jun/2012 08:24:43] "GET /admin/bookmarks/moneyuser/5cc3bb12-fb22-4168-8860-0c7ee6b2c11a/ HTTP/1.1" 200 5431
+[0m[m[19/Jun/2012 08:24:43] "GET /admin/jsi18n/ HTTP/1.1" 200 2164
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 08:25:17] "GET / HTTP/1.1" 200 685
+[0m/root/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> a = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> a.uidT
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 356, in __get__
+    rel_obj = qs.get(**params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 369, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: uuidTable matching query does not exist. Lookup parameters were {'uid__exact': u'5cc3bb12-fb22-4168-8860-0c7ee6b2c11a'}
+>>> quit()
+/root/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 09:00:02] "GET / HTTP/1.1" 200 685
+[0m[m[19/Jun/2012 09:00:21] "GET / HTTP/1.1" 200 687
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 09:00:48] "GET / HTTP/1.1" 200 689
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 09:03:17] "GET / HTTP/1.1" 500 74322
+[0mUnhandled exception in thread started by <bound method Command.inner_run of <django.contrib.staticfiles.management.commands.runserver.Command object at 0x16395e10>>
+Traceback (most recent call last):
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 111, in inner_run
+    ipv6=self.use_ipv6, threading=threading)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 207, in run
+    httpd.serve_forever()
+  File "/opt/python2.7/lib/python2.7/SocketServer.py", line 225, in serve_forever
+    r, w, e = select.select([self], [], [], poll_interval)
+AttributeError: 'NoneType' object has no attribute 'select'
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[m[19/Jun/2012 09:03:36] "GET / HTTP/1.1" 200 764
+[0mValidating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 09:03:46] "GET / HTTP/1.1" 500 74147
+[0m/root/MoneyProto/django_bookmarks # s
+s: command not found
+/root/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> user = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> user.uidT
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 356, in __get__
+    rel_obj = qs.get(**params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 369, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: uuidTable matching query does not exist. Lookup parameters were {'uid__exact': u'5cc3bb12-fb22-4168-8860-0c7ee6b2c11a'}
+>>> user.uidT = uuidtable.objects.create_uuid()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'uuidtable' is not defined
+>>>user.uidT = uuidTable.objects.create_uuid()
+>>> user.uidT.save()
+>>> quit()
+/root/MoneyProto/django_bookmarks # python2.7 manage.py runserver 0.0.0.0:8080
+Validating models...
+
+0 errors found
+Django version 1.5, using settings 'django_bookmarks.settings'
+Development server is running at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[35;1m[19/Jun/2012 09:06:33] "GET / HTTP/1.1" 500 74378
+[0m/root/MoneyProto/django_bookmarks # python2.7 manage.py shell
+Python 2.7 (r27:82500, May 14 2012, 16:21:10) 
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-52)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from bookmarks.models import *
+>>> user = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+>>> user.uidT
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/fields/related.py", line 356, in __get__
+    rel_obj = qs.get(**params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 369, in get
+    (self.model._meta.object_name, kwargs))
+DoesNotExist: uuidTable matching query does not exist. Lookup parameters were {'uid__exact': u'5cc3bb12-fb22-4168-8860-0c7ee6b2c11a'}
+>>> user.uidT = uuidTable.objects.create_uuid()
+>>> user.uidT.save()
+>>> user.save()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 483, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/base.py", line 578, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/query.py", line 1581, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 907, in execute_sql
+    cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/opt/python2.7/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: column username is not unique
+>>> 

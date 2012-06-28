@@ -1,3 +1,4 @@
+e# -*- coding: utf-8 -*-
 from django.http import *
 from django.shortcuts import *
 from django.http import HttpResponseRedirect
@@ -11,6 +12,10 @@ from django import forms
 from django.forms.util import ErrorList
 from django.core import serializers
 from django.utils import simplejson
+from bookmarks.models import *
+from bookmarks.uidDef import *
+from django.utils.encoding import *
+
 
 @csrf_exempt
 def login_page_phone(request):
@@ -58,3 +63,149 @@ def register_page_phone(request):
 
     variables = RequestContext(request, {'form' : form})
     return render_to_response('registration/register.html', variables)
+
+
+#User Infomation set Method
+def bank_account(request, user_id):
+    if request.method == 'POST':
+        form = BankAccountForm(request.POST)
+        if form.is_valid():
+            user = MoneyUser.objects.get(username=request.POST['username'])
+            bankAccount = BankAccount.objects.create(
+                accountID=form.cleaned_data['accountID'],
+                accountType=form.cleaned_data['accountType'],
+                bankCompany=form.cleaned_data['bankCompany'],
+                ownerName=form.cleaned_data['ownerName'],
+                title=form.cleaned_data['title'],
+                moneyAccount=user
+                )
+            bankAccount.save()
+
+            return_data = {'success': 1}
+            serial_data = simplejson.dumps(return_data)
+        else:
+            return_data = {'success': 0}
+            serial_data = simplejson.dumps(return_data)
+
+        return HttpResponse(serial_data)
+    else:
+        user = MoneyUser.objects.get(id=user_id)
+        bankAccounts = user.bankaccount_set.all()
+
+        #serializer method for json
+        '''
+        response = HttpResponse()
+        json_serializer = serializers.get_serializer("json")() 
+        json_serializer.serialize(bankAccounts, ensure_ascii=False, stream = response)
+        '''
+        
+        #easy method with simplejson
+        bankAccountList = []
+        for bankAccount in bankAccounts:
+            return_data = {'accountID': bankAccount.accountID,
+                           'accountType' : bankAccount.accountType,
+                           'bankCompany' : bankAccount.bankCompany,
+                           'ownerName' : bankAccount.ownerName,
+                           'title' : bankAccount.title,
+                           'success': 1}
+            bankAccountList.append(return_data)
+        serial_data = simplejson.dumps(bankAccountList, ensure_ascii = False)
+           
+        
+    #print serial_data
+    #print response.content
+    #return response
+    return HttpResponse(serial_data, content_type = 'application/json; charset=utf-8')
+
+
+def cash(request):
+    if request.method == 'POST':
+        form = CashForm(request.POST)
+        if form.is_valid():
+            moneyUser = MoneyUser.objects.get(username=request.POST['username'])
+            cash = Cash.objects.create(
+                cashID=form.cleaned_data['cashID'],
+                desc=form.cleaned_data['desc'],
+                user=form.cleaned_data['user'],
+                moneyAccount=moneyUser
+                )
+            cash.save()
+
+            return_data = {'success': 1}
+            serial_data = simplejson.dumps(return_data)
+        else:
+            return_data = {'success': 0}
+            serial_data = simplejson.dumps(return_data)
+    return HttpResponse(serial_data)
+
+def credit_card(request):
+    if request.method == 'POST':
+        form = CreditCardForm(request.POST)
+        if form.is_valid():
+            user = MoneyUser.objects.get(username=request.POST['username'])
+            creditcard = CreditCard.objects.create(
+                cardCompany=form.cleaned_data['cardCompany'],
+                cardID=form.cleaned_data['cardID'],
+                personPNO=form.cleaned_data['personPNO'],
+                smsPNO=form.cleaned_data['smsPNO'],
+                title=form.cleaned_data['title'],
+                type=form.cleaned_data['type'],
+                uID=form.cleaned_data['uID'],
+                uPWD=form.cleaned_data['uPWD'],
+                userName=form.cleaned_data['userName'],
+                moneyAccount=user
+                )
+            creditcard.save()
+
+            return_data = {'success': 1}
+            serial_data = simplejson.dumps(return_data)
+        else:
+            return_data = {'success': 0}
+            serial_data = simplejson.dumps(return_data)
+    return HttpResponse(serial_data)
+
+def stock_account(request):
+    if request.method == 'POST':
+        form = StockAccountForm(request.POST)
+        if form.is_valid():
+            user = MoneyUser.objects.get(username=request.POST['username'])
+            stockaccount = StockAccount.objects.create(
+                accountID=form.cleaned_data['cashID'],
+                owner=form.cleaned_data['owner'],
+                moneyAccount=user
+                )
+            stockaccount.save()
+
+            return_data = {'success': 1}
+            serial_data = simplejson.dumps(return_data)
+        else:
+            return_data = {'success': 0}
+            serial_data = simplejson.dumps(return_data)
+    return HttpResponse(serial_data)
+
+def uid_request(request, uid):
+    uidV = uuidTable.objects.get(uid = uid)
+    type = uidV.type
+
+    uidDefs = {MONEYUSER_TYPE : money_user_uid,
+               BANKACCOUNT_TYPE : bankaccount_uid,
+               CASH_TYPE : cash_uid,
+               CREDITCARD_TYPE : creditcard_uid,
+               STOCKACCOUNT_TYPE : stockaccount_uid,
+               BANKACCOUNTHISTORY_TYPE : bankaccounthis_uid,
+               CASHHISTORY_TYPE : cashhis_uid,
+               CREDITCARDHISTORY_TYPE : creditcardhis_uid,
+               SASSET_TYPE : sasset_uid,
+               }
+    parameters = {MONEYUSER_TYPE : uidV.moneyuser
+                  BANKACCOUNT_TYPE : uidV.bankaccount,
+                  CASH_TYPE : uidV.cash,
+                  CREDITCARD_TYPE : uidV.creditcard,
+                  STOCKACCOUNT_TYPE : uidV.stockaccount,
+                  BANKACCOUNTHISTORY_TYPE : uidV.bankaccounthistory,
+                  CASHHISTORY_TYPE : uidV.cashhistory,
+                  CREDITCARDHISTORY_TYPE : uidV.creditcardhistory,
+                  SASSET_TYPE : uidV.sasset,
+               }
+    
+    return HttpResponse(uidDefs.get(type)(parameters.get(type)), content_type = 'application/json; charset=utf-8')

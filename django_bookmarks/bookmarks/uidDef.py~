@@ -1,0 +1,23 @@
+from bookmarks.models import *
+from django.utils import simplejson
+
+MONEYUSER_TYPE = 0
+BANKACCOUNT_TYPE = 1
+CASH_TYPE = 2
+CREDITCARD_TYPE = 3
+STOCKACCOUNT_TYPE = 4
+BANKACCOUNTHISTORY_TYPE = 5
+CASHHISTORY_TYPE = 6
+CREDITCARDHISTORY_TYPE = 7
+SASSET_TYPE = 8
+
+def money_user_uid(moneyuser):
+    return_data = {
+        'type': MONEYUSER_TYPE,
+        'username': moneyuser.username,
+        'sex' : moneyuser.sex,
+        'age' : moneyuser.age,
+        'uid' : moneyuser.uidT.uid}
+    print return_data
+    serial_data = simplejson.dumps(return_data, ensure_ascii = False)
+    return serial_data

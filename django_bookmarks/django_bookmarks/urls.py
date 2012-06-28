@@ -24,12 +24,28 @@ urlpatterns = patterns('',
     url(r'^accounts/login/$', login_page),
     url(r'^accounts/logout/$', logout_page),                   
     url(r'^register/$', register_page),
+    url(r'^(?P<uid>\w*)/bankaccountregister/$', bank_account_page),
+    url(r'^(?P<uid>\w*)/cashregister/$', cash_page),
+    url(r'^(?P<uid>\w*)/creditcardregister/$', credit_card_page),
+    url(r'^(?P<uid>\w*)/stockaccountregister/$', stock_account_page),
+    url(r'^(?P<uid>\w*)/historyregister/$', history_page),                
     url(r'^$', main_page),
 
-    #mobile
-    url(r'^registerPhone/$', register_page_phone),
-    url(r'^accounts/loginPhone/$', login_page_phone),
-    url(r'^bankAccount/', bank_account),
     #adminpage
     url(r'^admin/', include(admin.site.urls)),
+
+    #mobile
+    url(r'^registration$', register_page_phone),
+    url(r'^authenticate/getaccesstoken$', login_page_phone),
+
+    url(r'^(?P<uid>\w*)/bankaccounts/', bank_account),
+    url(r'^(?P<uid>\w*)/cashs/', cash),
+    url(r'^(?P<uid>\w*)/creditcards/', credit_card),
+    url(r'^(?P<uid>\w*)/stockaccounts/', stock_account),
+    url(r'^(?P<uid>\w*)/histories/$', histories_request),
+    url(r'^(?P<uid>\w*)$', uid_request),
+                       
+   
+    
 )
+    
