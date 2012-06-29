@@ -1,0 +1,1004 @@
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: stunnel 4.42 on x86_64-pc-linux-gnu platform
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: Compiled with OpenSSL 1.0.0e 6 Sep 2011
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: Running  with OpenSSL 1.0.1 14 Mar 2012
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: Update OpenSSL shared libraries or rebuild stunnel
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: Threading:PTHREAD SSL:ENGINE Auth:LIBWRAP Sockets:POLL,IPv6
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 10:58:35 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 10:58:35 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 10:59:50 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:62980
+2012.06.29 10:59:50 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:56646
+2012.06.29 10:59:50 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 10:59:50 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 10:59:50 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 10:59:50 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:13850
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37909
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Connection closed: 209 bytes sent to SSL, 851 bytes sent to socket
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:31188
+2012.06.29 10:59:52 LOG3[20287:140615696582400]: SSL_accept: 1408A0D7: error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:50272
+2012.06.29 10:59:52 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:51513
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 10:59:52 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37910
+2012.06.29 10:59:53 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 10:59:53 LOG5[20287:140615696582400]: Connection closed: 1049 bytes sent to SSL, 866 bytes sent to socket
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:23819
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37911
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:6329
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 10:59:54 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37912
+2012.06.29 10:59:55 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 10:59:55 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 802 bytes sent to socket
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38911
+2012.06.29 11:01:17 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38912
+2012.06.29 11:01:17 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38913
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37913
+2012.06.29 11:01:17 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38914
+2012.06.29 11:01:18 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38915
+2012.06.29 11:01:18 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38916
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37914
+2012.06.29 11:01:18 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38917
+2012.06.29 11:01:19 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38918
+2012.06.29 11:01:19 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38919
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37915
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38920
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:01:19 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37916
+2012.06.29 11:01:20 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:01:20 LOG5[20287:140615696582400]: Connection closed: 209 bytes sent to SSL, 260 bytes sent to socket
+2012.06.29 11:01:20 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38921
+2012.06.29 11:01:20 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:01:20 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37917
+2012.06.29 11:01:21 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Connection closed: 1049 bytes sent to SSL, 275 bytes sent to socket
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38923
+2012.06.29 11:01:21 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38924
+2012.06.29 11:01:21 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.170.217:38925
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37918
+2012.06.29 11:01:21 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 416 bytes sent to socket
+2012.06.29 11:04:02 LOG5[20287:140615696582400]: Service https accepted connection from 69.171.234.7:53519
+2012.06.29 11:04:02 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:02 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37919
+2012.06.29 11:04:03 LOG5[20287:140615696582400]: Connection closed: 209 bytes sent to SSL, 203 bytes sent to socket
+2012.06.29 11:04:03 LOG5[20287:140615696582400]: Service https accepted connection from 69.171.234.5:35472
+2012.06.29 11:04:03 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:03 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37920
+2012.06.29 11:04:03 LOG5[20287:140615696582400]: Connection closed: 1049 bytes sent to SSL, 218 bytes sent to socket
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:58526
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37921
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:12223
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37922
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Connection closed: 209 bytes sent to SSL, 948 bytes sent to socket
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:29134
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37923
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:24510
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:27 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37924
+2012.06.29 11:04:28 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:04:28 LOG5[20287:140615696582400]: Connection closed: 1049 bytes sent to SSL, 963 bytes sent to socket
+2012.06.29 11:04:28 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:43428
+2012.06.29 11:04:28 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:28 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37925
+2012.06.29 11:04:28 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:04:28 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:32373
+2012.06.29 11:04:28 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:04:28 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37926
+2012.06.29 11:04:29 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:04:29 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 802 bytes sent to socket
+2012.06.29 11:05:20 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:4561
+2012.06.29 11:05:20 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:05:20 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:23 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:4562
+2012.06.29 11:05:23 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:05:23 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37927
+2012.06.29 11:05:23 LOG5[20287:140615696512768]: Connection closed: 209 bytes sent to SSL, 666 bytes sent to socket
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4563
+2012.06.29 11:05:23 LOG3[20287:140615696582400]: SSL_accept: 1408A0D7: error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4564
+2012.06.29 11:05:23 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4565
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:05:23 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37928
+2012.06.29 11:05:24 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: Connection closed: 1049 bytes sent to SSL, 681 bytes sent to socket
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4567
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37929
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4568
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:05:24 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37930
+2012.06.29 11:05:25 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:05:25 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 748 bytes sent to socket
+2012.06.29 11:05:44 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:4571
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4570
+2012.06.29 11:05:44 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:44 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:05:44 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:44 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:4573
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4572
+2012.06.29 11:05:44 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:05:44 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:44 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4574
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37931
+2012.06.29 11:05:44 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4580
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37932
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4581
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:10 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37933
+2012.06.29 11:06:11 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: Connection closed: 1049 bytes sent to SSL, 903 bytes sent to socket
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4582
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37934
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4583
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:11 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37935
+2012.06.29 11:06:12 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:06:12 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 748 bytes sent to socket
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4584
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37936
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4585
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37937
+2012.06.29 11:06:22 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: Connection closed: 1075 bytes sent to SSL, 1035 bytes sent to socket
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4586
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37938
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:4587
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 11:06:22 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37939
+2012.06.29 11:06:23 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 11:06:23 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 748 bytes sent to socket
+2012.06.29 13:31:27 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7464
+2012.06.29 13:31:27 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 13:31:27 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:31:27 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7465
+2012.06.29 13:31:27 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:31:27 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37940
+2012.06.29 13:31:28 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: Connection closed: 1636 bytes sent to SSL, 873 bytes sent to socket
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7468
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37941
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7469
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:31:28 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37942
+2012.06.29 13:31:29 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:31:29 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 792 bytes sent to socket
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7530
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37943
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7531
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:02 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37944
+2012.06.29 13:32:03 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:32:03 LOG5[20287:140615696582400]: Connection closed: 1747 bytes sent to SSL, 1152 bytes sent to socket
+2012.06.29 13:32:03 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7532
+2012.06.29 13:32:03 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:03 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:37945
+2012.06.29 13:32:03 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:32:03 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7533
+2012.06.29 13:32:03 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:03 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37946
+2012.06.29 13:32:04 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:32:04 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 792 bytes sent to socket
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7535
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37947
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7536
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:21 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37948
+2012.06.29 13:32:22 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: Connection closed: 1756 bytes sent to SSL, 1168 bytes sent to socket
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7537
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37949
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7538
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:32:22 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37950
+2012.06.29 13:32:23 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:32:23 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 792 bytes sent to socket
+2012.06.29 13:33:37 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:16386
+2012.06.29 13:33:37 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 13:33:37 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:38 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:44948
+2012.06.29 13:33:38 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 13:33:38 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:38 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:44395
+2012.06.29 13:33:38 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:38 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37951
+2012.06.29 13:33:39 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: Connection closed: 1049 bytes sent to SSL, 797 bytes sent to socket
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:56714
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37952
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:17093
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:39 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37953
+2012.06.29 13:33:40 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:33:40 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 767 bytes sent to socket
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:47800
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37954
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:11758
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37955
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:47868
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:43 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37956
+2012.06.29 13:33:44 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: Connection closed: 1636 bytes sent to SSL, 825 bytes sent to socket
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:20257
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37957
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:49233
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:44 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37958
+2012.06.29 13:33:45 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:33:45 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:36926
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37959
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:16019
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:54 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37960
+2012.06.29 13:33:55 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: Connection closed: 1759 bytes sent to SSL, 1188 bytes sent to socket
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:51318
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37961
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:26659
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:33:55 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37962
+2012.06.29 13:33:56 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:33:56 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:44:46 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:38403
+2012.06.29 13:44:47 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:44:47 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37963
+2012.06.29 13:44:47 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:44:48 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:31211
+2012.06.29 13:44:48 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:44:48 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37964
+2012.06.29 13:44:49 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:44:49 LOG5[20287:140615696512768]: Connection closed: 1759 bytes sent to SSL, 1188 bytes sent to socket
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:41325
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37965
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:51045
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:44:52 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37966
+2012.06.29 13:44:54 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:44:54 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:44804
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37967
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:31511
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:14 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37968
+2012.06.29 13:47:15 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:47:15 LOG5[20287:140615696512768]: Connection closed: 1759 bytes sent to SSL, 1188 bytes sent to socket
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:49864
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37969
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:57213
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:16 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37970
+2012.06.29 13:47:18 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:34905
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37971
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:24908
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:18 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37972
+2012.06.29 13:47:19 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: Connection closed: 1879 bytes sent to SSL, 1180 bytes sent to socket
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:63601
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37973
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:26954
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:19 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37974
+2012.06.29 13:47:20 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:47:20 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:3754
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37975
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:56510
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:22 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37976
+2012.06.29 13:47:23 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: Connection closed: 1759 bytes sent to SSL, 1188 bytes sent to socket
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:35628
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37977
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:32380
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:23 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37978
+2012.06.29 13:47:24 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:47:24 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 13:47:40 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 13:47:40 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 13:47:40 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 13:47:40 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 13:47:40 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Reading configuration from file stunnel/dev_https
+2012.06.29 13:47:40 LOG4[20287:140615696590592]: Insecure file permissions on stunnel/stunnel.pem
+2012.06.29 13:47:40 LOG5[20287:140615696590592]: Configuration successful
+2012.06.29 13:47:59 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:28078
+2012.06.29 13:47:59 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 13:47:59 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:47:59 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:19619
+2012.06.29 13:47:59 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:47:59 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37979
+2012.06.29 13:48:00 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: Connection closed: 1636 bytes sent to SSL, 895 bytes sent to socket
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:28057
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37980
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:40087
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:00 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37981
+2012.06.29 13:48:01 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:48:01 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:1163
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37982
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:27986
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:06 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37983
+2012.06.29 13:48:07 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: Connection closed: 1759 bytes sent to SSL, 1188 bytes sent to socket
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:5157
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37984
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:37741
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:07 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37985
+2012.06.29 13:48:08 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:48:08 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:52241
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37986
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:23325
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:48:59 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37987
+2012.06.29 13:49:00 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:49:00 LOG5[20287:140615696512768]: Connection closed: 70473 bytes sent to SSL, 1184 bytes sent to socket
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:45979
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37988
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:48334
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:49:01 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37989
+2012.06.29 13:49:02 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:49:02 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 811 bytes sent to socket
+2012.06.29 13:50:44 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:20572
+2012.06.29 13:50:44 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:44 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37990
+2012.06.29 13:50:44 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:46360
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37991
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:38557
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:47 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37992
+2012.06.29 13:50:48 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: Connection closed: 1636 bytes sent to SSL, 895 bytes sent to socket
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:17296
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37993
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:27864
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:48 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37994
+2012.06.29 13:50:49 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:50:49 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 812 bytes sent to socket
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:21899
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37995
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:42061
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:55 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37996
+2012.06.29 13:50:56 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: Connection closed: 70479 bytes sent to SSL, 1185 bytes sent to socket
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:18876
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37997
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:28028
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:50:56 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37998
+2012.06.29 13:50:57 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:50:57 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 812 bytes sent to socket
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:50131
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:37999
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:16391
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:38 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38000
+2012.06.29 13:51:39 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: Connection closed: 1636 bytes sent to SSL, 896 bytes sent to socket
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:28980
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38001
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:36753
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:39 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38002
+2012.06.29 13:51:40 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:51:40 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 812 bytes sent to socket
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:14644
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38003
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:11093
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:43 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38004
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: Connection closed: 325 bytes sent to SSL, 1185 bytes sent to socket
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:45314
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38005
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:51841
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:44 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38006
+2012.06.29 13:51:45 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: Connection closed: 862 bytes sent to SSL, 983 bytes sent to socket
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:53004
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38007
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:52665
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:51:45 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38008
+2012.06.29 13:51:46 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:51:46 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 13:52:19 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:63199
+2012.06.29 13:52:19 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:34341
+2012.06.29 13:52:19 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:19 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38009
+2012.06.29 13:52:19 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38010
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:44060
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38011
+2012.06.29 13:52:20 LOG3[20287:140615696582400]: SSL socket closed on SSL_read with 845 byte(s) in buffer
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Connection reset: 17 bytes sent to SSL, 957 bytes sent to socket
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:48543
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38012
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:19838
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:20 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38013
+2012.06.29 13:52:21 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: Connection closed: 1636 bytes sent to SSL, 914 bytes sent to socket
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:23319
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38014
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:57609
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:52:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38015
+2012.06.29 13:52:22 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:52:22 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 13:54:05 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9432
+2012.06.29 13:54:05 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:54:05 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38016
+2012.06.29 13:54:05 LOG3[20287:140615696582400]: SSL_read: 14094416: error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown
+2012.06.29 13:54:05 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:54:28 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9433
+2012.06.29 13:54:28 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:54:28 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38017
+2012.06.29 13:54:29 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Connection closed: 1636 bytes sent to SSL, 330 bytes sent to socket
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9434
+2012.06.29 13:54:29 LOG3[20287:140615696582400]: SSL_accept: 1408A0D7: error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9435
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38018
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 354 bytes sent to socket
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9436
+2012.06.29 13:54:29 LOG3[20287:140615696582400]: SSL_accept: 1408A0D7: error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9437
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:54:29 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38019
+2012.06.29 13:54:31 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:54:31 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 384 bytes sent to socket
+2012.06.29 13:54:31 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9438
+2012.06.29 13:54:31 LOG3[20287:140615696582400]: SSL_accept: 1408A0D7: error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing
+2012.06.29 13:54:31 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:54:31 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9439
+2012.06.29 13:54:31 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:54:31 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38020
+2012.06.29 13:54:32 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:54:32 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 384 bytes sent to socket
+2012.06.29 13:54:46 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9440
+2012.06.29 13:54:46 LOG3[20287:140615696582400]: SSL_accept: 1408A0D7: error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing
+2012.06.29 13:54:46 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 13:54:46 LOG5[20287:140615696582400]: Service https accepted connection from 222.112.172.38:9441
+2012.06.29 13:54:46 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 13:54:46 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38021
+2012.06.29 13:54:47 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 13:54:47 LOG5[20287:140615696582400]: Connection closed: 1636 bytes sent to SSL, 408 bytes sent to socket
+2012.06.29 14:20:31 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7760
+2012.06.29 14:20:31 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 14:20:31 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:20:31 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7761
+2012.06.29 14:20:31 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:20:31 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38022
+2012.06.29 14:20:32 LOG5[20287:140615696582400]: Connection closed: 325 bytes sent to SSL, 1134 bytes sent to socket
+2012.06.29 14:20:32 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7762
+2012.06.29 14:20:32 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:20:32 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38023
+2012.06.29 14:20:32 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:20:32 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7763
+2012.06.29 14:20:32 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:20:32 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38024
+2012.06.29 14:20:33 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: Connection closed: 863 bytes sent to SSL, 929 bytes sent to socket
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7765
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38025
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7766
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:20:33 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38026
+2012.06.29 14:20:34 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:20:34 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7901
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38027
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7902
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:21:27 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38028
+2012.06.29 14:21:28 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: Connection closed: 4299 bytes sent to SSL, 1043 bytes sent to socket
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7903
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38029
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: Service https accepted connection from 121.135.196.80:7904
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:21:28 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38030
+2012.06.29 14:21:29 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:21:29 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:61680
+2012.06.29 14:22:00 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:34861
+2012.06.29 14:22:00 LOG3[20287:140615696512768]: SSL_accept: Peer suddenly disconnected
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:21521
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:00 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38031
+2012.06.29 14:22:01 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:01 LOG5[20287:140615696512768]: Connection closed: 862 bytes sent to SSL, 905 bytes sent to socket
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:18220
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38032
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:38086
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:04 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38033
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:52764
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38034
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:40213
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:04 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38035
+2012.06.29 14:22:05 LOG3[20287:140615696512768]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:05 LOG5[20287:140615696512768]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 14:22:05 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: Connection closed: 253 bytes sent to SSL, 937 bytes sent to socket
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:12373
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38036
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:27237
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:05 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38037
+2012.06.29 14:22:06 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:06 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7910
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38038
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7911
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:16 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38039
+2012.06.29 14:22:17 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: Connection closed: 253 bytes sent to SSL, 917 bytes sent to socket
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7912
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38040
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7913
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:17 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38041
+2012.06.29 14:22:19 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:19 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7917
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38042
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7918
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:45 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38043
+2012.06.29 14:22:47 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: Connection closed: 253 bytes sent to SSL, 1041 bytes sent to socket
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7919
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38044
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7920
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:22:47 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38045
+2012.06.29 14:22:48 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:22:48 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:53192
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38046
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:12481
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:14 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38047
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:11631
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:3594
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38049
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38048
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:16479
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:48848
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:14 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38050
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:14 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38051
+2012.06.29 14:23:15 LOG5[20287:140615696512768]: Connection closed: 1020 bytes sent to SSL, 935 bytes sent to socket
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Connection closed: 14251 bytes sent to SSL, 934 bytes sent to socket
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:50637
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38052
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:33359
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38053
+2012.06.29 14:23:15 LOG5[20287:140615696443136]: Connection closed: 458 bytes sent to SSL, 921 bytes sent to socket
+2012.06.29 14:23:15 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: Connection closed: 2408 bytes sent to SSL, 911 bytes sent to socket
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:14674
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38054
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:49564
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:15 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38055
+2012.06.29 14:23:16 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:16 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:5337
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38056
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:32829
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38057
+2012.06.29 14:23:19 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:15525
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Connection closed: 443 bytes sent to SSL, 1228 bytes sent to socket
+2012.06.29 14:23:19 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:19 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38058
+2012.06.29 14:23:19 LOG5[20287:140615696443136]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:23364
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:19 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38059
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:8233
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38060
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:2588
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38061
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Connection closed: 628 bytes sent to SSL, 939 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:36120
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:57093
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:58290
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38062
+2012.06.29 14:23:20 LOG5[20287:140615696443136]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38063
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38064
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696303872]: Service https accepted connection from 39.117.40.3:27546
+2012.06.29 14:23:20 LOG5[20287:140615696303872]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696303872]: Service https connected remote server from 127.0.0.1:38065
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:15862
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:6973
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38067
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38066
+2012.06.29 14:23:20 LOG5[20287:140615696303872]: Connection closed: 1029 bytes sent to SSL, 925 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696512768]: Connection closed: 304 bytes sent to SSL, 927 bytes sent to socket
+2012.06.29 14:23:20 LOG5[20287:140615696373504]: Connection closed: 304 bytes sent to SSL, 930 bytes sent to socket
+2012.06.29 14:23:21 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: Connection closed: 7888 bytes sent to SSL, 986 bytes sent to socket
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:12902
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38068
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:54255
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:21 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38069
+2012.06.29 14:23:22 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:22 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:25588
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38070
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:52570
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38071
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:11254
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38072
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Service https accepted connection from 39.117.40.3:12461
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:2101
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:29812
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Service https connected remote server from 127.0.0.1:38074
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38073
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:25570
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38075
+2012.06.29 14:23:23 LOG5[20287:140615696234240]: Service https accepted connection from 39.117.40.3:29397
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Service https accepted connection from 39.117.40.3:34453
+2012.06.29 14:23:23 LOG5[20287:140615696373504]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38076
+2012.06.29 14:23:23 LOG5[20287:140615696443136]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:38791
+2012.06.29 14:23:23 LOG5[20287:140615696234240]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696234240]: Service https connected remote server from 127.0.0.1:38077
+2012.06.29 14:23:23 LOG5[20287:140615696234240]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Service https connected remote server from 127.0.0.1:38078
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38079
+2012.06.29 14:23:23 LOG5[20287:140615696512768]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Service https accepted connection from 39.117.40.3:27152
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:23 LOG5[20287:140615696303872]: Service https connected remote server from 127.0.0.1:38080
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:29377
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: Service https accepted connection from 39.117.40.3:63906
+2012.06.29 14:23:24 LOG5[20287:140615696443136]: Service https accepted connection from 39.117.40.3:43019
+2012.06.29 14:23:24 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:32702
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: Service https connected remote server from 127.0.0.1:38081
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38082
+2012.06.29 14:23:24 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:24 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38083
+2012.06.29 14:23:24 LOG5[20287:140615696443136]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:24 LOG5[20287:140615696443136]: Service https connected remote server from 127.0.0.1:38084
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: Connection closed: 6861 bytes sent to SSL, 937 bytes sent to socket
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: Service https accepted connection from 39.117.40.3:50287
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: Service https connected remote server from 127.0.0.1:38085
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: Connection closed: 3464 bytes sent to SSL, 959 bytes sent to socket
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: Service https accepted connection from 39.117.40.3:49744
+2012.06.29 14:23:24 LOG5[20287:140615696443136]: Connection closed: 512 bytes sent to SSL, 944 bytes sent to socket
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: Service https connected remote server from 127.0.0.1:38086
+2012.06.29 14:23:24 LOG5[20287:140615696512768]: Connection closed: 4948 bytes sent to SSL, 940 bytes sent to socket
+2012.06.29 14:23:24 LOG5[20287:140615696234240]: Connection closed: 5388 bytes sent to SSL, 961 bytes sent to socket
+2012.06.29 14:23:24 LOG5[20287:140615696373504]: Connection closed: 164056 bytes sent to SSL, 939 bytes sent to socket
+2012.06.29 14:23:24 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:24 LOG5[20287:140615696582400]: Connection closed: 5762 bytes sent to SSL, 980 bytes sent to socket
+2012.06.29 14:23:25 LOG3[20287:140615696303872]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Connection closed: 2302 bytes sent to SSL, 927 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Service https accepted connection from 39.117.40.3:35973
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:64264
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Service https connected remote server from 127.0.0.1:38087
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:47275
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38088
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Service https accepted connection from 39.117.40.3:55801
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Service https connected remote server from 127.0.0.1:38090
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38089
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:26961
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: Service https accepted connection from 39.117.40.3:20701
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38091
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: Service https connected remote server from 127.0.0.1:38092
+2012.06.29 14:23:25 LOG5[20287:140615696373504]: Connection closed: 1117 bytes sent to SSL, 946 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696303872]: Connection closed: 371 bytes sent to SSL, 949 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Connection closed: 382 bytes sent to SSL, 944 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:46462
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38093
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https accepted connection from 39.117.40.3:1983
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:23:25 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38094
+2012.06.29 14:23:26 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:23:26 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 856 bytes sent to socket
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7935
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38095
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7937
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:24:46 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38096
+2012.06.29 14:24:47 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: Connection closed: 863 bytes sent to SSL, 937 bytes sent to socket
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7938
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38097
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7939
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:24:47 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38098
+2012.06.29 14:24:49 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:24:49 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:25:57 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7952
+2012.06.29 14:25:57 LOG3[20287:140615696582400]: SSL_accept: Peer suddenly disconnected
+2012.06.29 14:25:57 LOG5[20287:140615696582400]: Connection reset: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:25:57 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7953
+2012.06.29 14:25:57 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:25:57 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38099
+2012.06.29 14:25:58 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: Connection closed: 253 bytes sent to SSL, 917 bytes sent to socket
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7955
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38100
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7956
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:25:58 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38101
+2012.06.29 14:25:59 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:25:59 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7957
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38102
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7958
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:03 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38103
+2012.06.29 14:26:04 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: Connection closed: 4302 bytes sent to SSL, 919 bytes sent to socket
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7960
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38104
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7961
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:04 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38105
+2012.06.29 14:26:05 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:26:05 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7962
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38106
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7963
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:08 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38107
+2012.06.29 14:26:09 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: Connection closed: 250 bytes sent to SSL, 917 bytes sent to socket
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7964
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38108
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: Connection closed: 0 bytes sent to SSL, 0 bytes sent to socket
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: Service https accepted connection from 121.135.196.80:7965
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: connect_blocking: connected 127.0.0.1:8001
+2012.06.29 14:26:09 LOG5[20287:140615696582400]: Service https connected remote server from 127.0.0.1:38109
+2012.06.29 14:26:10 LOG3[20287:140615696582400]: transfer: s_poll_wait: TIMEOUTclose exceeded: closing
+2012.06.29 14:26:10 LOG5[20287:140615696582400]: Connection closed: 4233 bytes sent to SSL, 836 bytes sent to socket

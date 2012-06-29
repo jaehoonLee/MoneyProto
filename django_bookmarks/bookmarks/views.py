@@ -62,18 +62,16 @@ def logout_page(request):
 
 def register_page(request):
     if request.method == 'POST':
-        print "Hello3"
+        print "Hello"
         form = RegistrationForm(request.POST)
         print "Hello2"
         if form.is_valid():
-            print "Hello"
             user = MoneyUser.objects.create_MoneyUser(
                 username=form.cleaned_data['username'],
                 password=form.cleaned_data['password1'],
                 sex = form.cleaned_data['sex'],
                 age = form.cleaned_data['age'],
                 )
-            print "User" + user.username
             request.session['userID'] = user.username;
             return HttpResponseRedirect('/')
     else:
@@ -95,7 +93,7 @@ def my_view(request):
 def main_page(request):
     if 'userID' in request.session:
         username = request.session['userID']
-        user = MoneyUser.objects.get(username='jaehoonlee88@gmail.com')
+        user = MoneyUser.objects.get(username=username)
         template = get_template('main_page.html')
         variables = Context({'user' : username, 'uid': user.uidT.uid})
         output = template.render(variables)

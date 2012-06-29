@@ -29,17 +29,16 @@ class RegistrationForm(forms.Form):
 
     def clean_username(self):
         username = self.cleaned_data['username']
-        print 'hello'
         '''
         if not re.search(r'^\w+$', username):
             raise forms.ValidationError(
                 'Username only available for Alphabet, Number, _')
         '''
-        try:
-            MoneyUser.objects.get(username=username)
-        except ObjectDoesNotExist:
+        user =  MoneyUser.objects.get(username=username)
+        if EC_USERNAME_DOES_NOT_EXISTS == user:
             return username
-        raise forms.ValidationError('Username already exists.')
+        else :
+            raise forms.ValidationError('Username already exists.')
          
 
 class LoginForm(forms.Form):

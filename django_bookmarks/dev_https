@@ -1,0 +1,10 @@
+pid=
+
+cert = /etc/stunnel/stunnel.pem
+foreground=yes
+debug = 7
+
+[https]
+accept=8002
+connect=8003
+TIMEOUTclose=1
